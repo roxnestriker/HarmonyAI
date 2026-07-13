@@ -1807,3 +1807,499 @@ Next:
 # Part V — Quality Standards
 
 Chapters:
+# Part V — Quality Standards
+
+# Chapter 21 — Testing Standards
+
+## 21.1 Purpose
+
+Testing ensures Harmony AI remains reliable, maintainable, and stable as the project evolves.
+
+Testing is considered an essential engineering activity rather than an optional verification step.
+
+Every significant implementation should include appropriate automated tests.
+
+---
+
+## 21.2 Testing Philosophy
+
+Harmony AI follows the principle:
+
+> Test behavior, not implementation.
+
+Tests should verify externally observable behavior rather than internal implementation details.
+
+A well-designed test suite enables confident refactoring while protecting existing functionality.
+
+---
+
+## 21.3 Testing Levels
+
+Harmony AI uses multiple levels of testing.
+
+### Unit Tests
+
+Validate individual functions, classes, and services in isolation.
+
+### Integration Tests
+
+Validate interactions between modules and services.
+
+### Functional Tests
+
+Validate complete user workflows against requirements.
+
+### Regression Tests
+
+Ensure previously implemented functionality continues to work after changes.
+
+### Performance Tests
+
+Measure execution time, memory usage, and scalability.
+
+---
+
+## 21.4 Test Organization
+
+Tests should mirror the project structure.
+
+Example:
+
+```
+tests/
+
+    unit/
+
+    integration/
+
+    functional/
+
+    performance/
+```
+
+---
+
+## 21.5 Unit Test Guidelines
+
+Unit tests should:
+
+- Test one behavior.
+- Be independent.
+- Execute quickly.
+- Produce deterministic results.
+- Avoid external dependencies.
+
+---
+
+## 21.6 Test Naming
+
+Test names should describe expected behavior.
+
+Examples:
+
+```
+test_scan_library_with_empty_folder()
+
+test_metadata_parser_handles_missing_artist()
+
+test_playlist_generation_returns_unique_tracks()
+```
+
+---
+
+## 21.7 Test Coverage
+
+Test coverage is a useful metric but not the primary goal.
+
+Priority should be given to:
+
+- Business logic
+- Critical workflows
+- Error handling
+- Edge cases
+
+---
+
+## 21.8 Mocking
+
+Mocks should be used to isolate external systems.
+
+Examples:
+
+- Database
+- Cloud services
+- File system
+- Network APIs
+
+Avoid excessive mocking that reduces test value.
+
+---
+
+## 21.9 Testing Checklist
+
+☐ Unit tests written
+
+☐ Edge cases tested
+
+☐ Integration verified
+
+☐ Regression considered
+
+☐ Tests documented
+
+---
+
+## 21.10 Chapter Summary
+
+Testing provides confidence that Harmony AI behaves correctly while enabling future development with reduced risk.
+
+---
+
+# Chapter 22 — Code Review Standards
+
+## 22.1 Purpose
+
+Code reviews improve software quality through structured evaluation before changes become part of the project.
+
+Reviews focus on engineering quality rather than personal coding preferences.
+
+---
+
+## 22.2 Review Objectives
+
+Reviews should verify:
+
+- Correctness
+- Maintainability
+- Readability
+- Simplicity
+- Security
+- Performance
+- Documentation
+- Testability
+
+---
+
+## 22.3 Review Philosophy
+
+Reviews should be:
+
+- Respectful
+- Constructive
+- Objective
+- Actionable
+
+The goal is continuous improvement rather than criticism.
+
+---
+
+## 22.4 Review Process
+
+Standard workflow:
+
+```
+Implementation
+
+↓
+
+Self Review
+
+↓
+
+AI Code Review
+
+↓
+
+Corrections
+
+↓
+
+Approval
+
+↓
+
+QA
+```
+
+---
+
+## 22.5 Review Checklist
+
+☐ Requirements satisfied
+
+☐ Architecture followed
+
+☐ Naming consistent
+
+☐ Logging implemented
+
+☐ Exceptions handled
+
+☐ Documentation updated
+
+☐ Tests completed
+
+☐ No unnecessary complexity
+
+☐ Ready for QA
+
+---
+
+## 22.6 Chapter Summary
+
+Code reviews maintain engineering consistency and reduce defects before integration.
+
+---
+
+# Chapter 23 — Performance Standards
+
+## 23.1 Purpose
+
+Harmony AI should provide responsive performance even with very large music libraries.
+
+Performance improvements should be driven by measurement rather than assumptions.
+
+---
+
+## 23.2 Performance Principles
+
+Engineering decisions should prioritize:
+
+- Fast startup
+- Responsive UI
+- Efficient database access
+- Efficient memory usage
+- Scalable algorithms
+
+---
+
+## 23.3 Optimization Philosophy
+
+Follow the principle:
+
+> Measure first, optimize second.
+
+Avoid premature optimization.
+
+---
+
+## 23.4 Performance Targets
+
+Performance goals should be defined for major components.
+
+Examples:
+
+- Library scanning
+- Search
+- Metadata loading
+- Recommendation generation
+- Database queries
+
+---
+
+## 23.5 Memory Management
+
+Applications should:
+
+- Release unused resources.
+- Avoid unnecessary object creation.
+- Stream large datasets when practical.
+
+---
+
+## 23.6 Performance Checklist
+
+☐ Algorithm reviewed
+
+☐ Complexity acceptable
+
+☐ Memory considered
+
+☐ Benchmarks completed
+
+☐ No unnecessary work
+
+---
+
+## 23.7 Chapter Summary
+
+Performance should remain predictable and scalable throughout the lifetime of Harmony AI.
+
+---
+
+# Chapter 24 — Security Standards
+
+## 24.1 Purpose
+
+Security protects user data, project integrity, and software reliability.
+
+Security considerations begin during design and continue throughout development.
+
+---
+
+## 24.2 Security Principles
+
+Harmony AI follows:
+
+- Least Privilege
+- Defense in Depth
+- Secure Defaults
+- Input Validation
+- Fail Securely
+
+---
+
+## 24.3 Input Validation
+
+Validate:
+
+- User input
+- File paths
+- Configuration
+- External data
+- API responses
+
+Never trust external input.
+
+---
+
+## 24.4 Sensitive Information
+
+Sensitive information should:
+
+- Never appear in logs.
+- Never be hardcoded.
+- Be stored securely.
+- Be documented appropriately.
+
+---
+
+## 24.5 Dependency Management
+
+External dependencies should be:
+
+- Trusted
+- Maintained
+- Actively supported
+- License compatible
+
+Dependencies should be reviewed periodically.
+
+---
+
+## 24.6 File Operations
+
+All file operations should:
+
+- Validate paths.
+- Handle failures safely.
+- Preserve user data.
+- Avoid accidental overwrites.
+
+---
+
+## 24.7 Security Checklist
+
+☐ Inputs validated
+
+☐ Secrets protected
+
+☐ Dependencies reviewed
+
+☐ Errors handled safely
+
+☐ File operations verified
+
+---
+
+## 24.8 Chapter Summary
+
+Security is integrated into every engineering activity and protects both users and the long-term health of Harmony AI.
+
+---
+
+# Chapter 25 — Definition of Done
+
+## 25.1 Purpose
+
+A feature is complete only when it satisfies both functional and engineering requirements.
+
+Completion is defined by objective criteria rather than developer opinion.
+
+---
+
+## 25.2 Engineering Completion
+
+Every feature should include:
+
+- Approved implementation
+- Passing tests
+- Updated documentation
+- Logging
+- Error handling
+- Configuration support
+- Review approval
+
+---
+
+## 25.3 Documentation Completion
+
+Required updates include:
+
+- PROJECT.md
+- Relevant specifications
+- Changelog
+- Developer documentation
+- User documentation (if applicable)
+
+---
+
+## 25.4 Quality Gates
+
+Before completion verify:
+
+☐ Requirements satisfied
+
+☐ Architecture followed
+
+☐ Implementation complete
+
+☐ Code reviewed
+
+☐ QA completed
+
+☐ Documentation updated
+
+☐ Tests passing
+
+☐ Technical debt documented
+
+☐ Ready for merge
+
+---
+
+## 25.5 Continuous Improvement
+
+After completion consider:
+
+- Refactoring opportunities
+- Performance improvements
+- Documentation improvements
+- Automation opportunities
+
+---
+
+## 25.6 Chapter Summary
+
+The Definition of Done ensures every Harmony AI feature meets a consistent level of engineering quality before being considered complete.
+
+---
+
+# End of Part 5
+
+Next:
+
+# Part VI — Templates & Checklists
+
+Chapters:
+
