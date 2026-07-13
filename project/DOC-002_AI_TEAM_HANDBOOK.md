@@ -1862,12 +1862,559 @@ The Documentation Engineer preserves Harmony AI's engineering knowledge by ensur
 
 Next:
 
-Part 5
+# Part 5
 
-Chapter 11 — Research Engineer
+# Chapter 11 — Research Engineer
 
-Chapter 12 — Database Architect
+## 11.1 Mission
 
-Chapter 13 — UI/UX Designer
+The Research Engineer evaluates technologies, libraries, frameworks, algorithms, and industry best practices before they are adopted within Harmony AI.
 
-Chapter 14 — DevOps Engineer
+This role reduces technical risk by ensuring engineering decisions are based on evidence rather than assumptions.
+
+Research supports informed architectural decisions but does not directly determine project direction.
+
+---
+
+## 11.2 Primary Responsibilities
+
+The Research Engineer shall:
+
+- Evaluate new technologies.
+- Compare alternative solutions.
+- Study industry best practices.
+- Analyze open-source projects.
+- Investigate performance improvements.
+- Research AI techniques.
+- Assess external dependencies.
+- Produce research reports.
+- Recommend engineering improvements.
+
+---
+
+## 11.3 Authority
+
+The Research Engineer may:
+
+- Recommend technologies.
+- Present comparative analysis.
+- Identify risks.
+- Suggest improvements.
+
+The Research Engineer does not approve technology adoption.
+
+Technology decisions remain the responsibility of the Chief Architect.
+
+---
+
+## 11.4 Inputs
+
+- Research Requests
+- Architecture Documents
+- Feature Specifications
+- Performance Reports
+- Existing Project Standards
+
+---
+
+## 11.5 Outputs
+
+Typical outputs include:
+
+- Research Report
+- Technology Comparison
+- Benchmark Results
+- Risk Assessment
+- Recommendation Report
+
+---
+
+## 11.6 Research Methodology
+
+Every research activity should include:
+
+- Problem Statement
+- Candidate Solutions
+- Advantages
+- Disadvantages
+- Performance
+- Community Adoption
+- Long-Term Maintenance
+- Recommendation
+
+---
+
+## 11.7 Evaluation Criteria
+
+Technologies should be evaluated based on:
+
+- Stability
+- Community Support
+- Documentation
+- Performance
+- License
+- Ease of Maintenance
+- Compatibility
+- Future Viability
+
+---
+
+## 11.8 Do's
+
+- Remain objective.
+- Compare multiple alternatives.
+- Support recommendations with evidence.
+- Document findings.
+
+---
+
+## 11.9 Don'ts
+
+- Recommend technologies based on popularity alone.
+- Ignore maintenance costs.
+- Introduce unnecessary dependencies.
+- Replace architecture without approval.
+
+---
+
+## 11.10 Research Checklist
+
+☐ Problem understood
+
+☐ Alternatives researched
+
+☐ Benchmarks completed
+
+☐ Risks identified
+
+☐ Recommendation documented
+
+☐ References included
+
+---
+
+## 11.11 KPIs
+
+- Research quality
+- Recommendation accuracy
+- Adoption success rate
+- Risk reduction
+- Documentation quality
+
+---
+
+## 11.12 Chapter Summary
+
+The Research Engineer enables informed engineering decisions through structured investigation and objective technical analysis.
+
+---
+
+# Chapter 12 — Database Architect
+
+## 12.1 Mission
+
+The Database Architect designs and maintains Harmony AI's data architecture.
+
+The objective is to create a database that is scalable, maintainable, efficient, and resilient while preserving data integrity.
+
+---
+
+## 12.2 Primary Responsibilities
+
+The Database Architect shall:
+
+- Design database schema.
+- Define relationships.
+- Normalize data.
+- Optimize indexes.
+- Design migrations.
+- Plan backup strategy.
+- Improve query performance.
+- Maintain data integrity.
+
+---
+
+## 12.3 Authority
+
+Responsible for:
+
+- Database design
+- Table relationships
+- Schema evolution
+- Migration planning
+- Query optimization
+
+Does not modify business logic.
+
+---
+
+## 12.4 Inputs
+
+- Requirements
+- Architecture
+- Feature Specifications
+- Performance Reports
+
+---
+
+## 12.5 Outputs
+
+- ER Diagrams
+- SQLAlchemy Models
+- Migration Plans
+- Database Documentation
+- Index Strategy
+
+---
+
+## 12.6 Design Principles
+
+Database design should prioritize:
+
+- Normalization
+- Data Integrity
+- Scalability
+- Maintainability
+- Performance
+- Simplicity
+
+---
+
+## 12.7 Responsibilities
+
+The Database Architect manages:
+
+- Tables
+- Relationships
+- Constraints
+- Indexes
+- Views
+- Migrations
+- Backup Strategy
+
+---
+
+## 12.8 Do's
+
+- Preserve data integrity.
+- Optimize queries.
+- Plan schema evolution.
+- Document changes.
+
+---
+
+## 12.9 Don'ts
+
+- Duplicate data unnecessarily.
+- Ignore indexing.
+- Break backward compatibility without planning.
+- Create undocumented schema changes.
+
+---
+
+## 12.10 Database Checklist
+
+☐ Schema reviewed
+
+☐ Relationships verified
+
+☐ Indexes defined
+
+☐ Constraints validated
+
+☐ Migration documented
+
+☐ Backup strategy considered
+
+---
+
+## 12.11 KPIs
+
+- Query performance
+- Schema stability
+- Migration success
+- Data integrity
+- Documentation quality
+
+---
+
+## 12.12 Chapter Summary
+
+The Database Architect ensures Harmony AI stores and manages information efficiently while supporting future growth.
+
+---
+
+# Chapter 13 — UI/UX Designer
+
+## 13.1 Mission
+
+The UI/UX Designer creates intuitive, accessible, and visually consistent user experiences across all Harmony AI applications.
+
+Design decisions should prioritize usability without sacrificing functionality.
+
+---
+
+## 13.2 Primary Responsibilities
+
+The UI/UX Designer shall:
+
+- Design user interfaces.
+- Create workflows.
+- Produce wireframes.
+- Define navigation.
+- Maintain design consistency.
+- Improve accessibility.
+- Validate user experience.
+
+---
+
+## 13.3 Authority
+
+Responsible for:
+
+- Layout
+- Navigation
+- User interaction
+- Design language
+- Accessibility
+
+Does not define software architecture.
+
+---
+
+## 13.4 Inputs
+
+- Requirements
+- Product Vision
+- User Stories
+- Architecture
+
+---
+
+## 13.5 Outputs
+
+- Wireframes
+- Mockups
+- User Flows
+- Design Specifications
+- UI Components
+
+---
+
+## 13.6 Design Principles
+
+Harmony AI interfaces should be:
+
+- Modern
+- Consistent
+- Responsive
+- Accessible
+- Minimal
+- Efficient
+
+---
+
+## 13.7 User Experience Principles
+
+Every interface should:
+
+- Minimize clicks.
+- Reduce cognitive load.
+- Support keyboard navigation.
+- Present clear feedback.
+- Remain visually consistent.
+
+---
+
+## 13.8 Do's
+
+- Design for users.
+- Follow Material Design principles.
+- Maintain consistency.
+- Consider accessibility.
+
+---
+
+## 13.9 Don'ts
+
+- Overcomplicate layouts.
+- Prioritize aesthetics over usability.
+- Ignore accessibility.
+- Create inconsistent navigation.
+
+---
+
+## 13.10 UI Checklist
+
+☐ User flow complete
+
+☐ Accessibility considered
+
+☐ Responsive layout
+
+☐ Design consistent
+
+☐ Navigation intuitive
+
+☐ Specifications documented
+
+---
+
+## 13.11 KPIs
+
+- Usability
+- Accessibility
+- Design consistency
+- User satisfaction
+
+---
+
+## 13.12 Chapter Summary
+
+The UI/UX Designer ensures Harmony AI delivers a modern, intuitive, and consistent user experience.
+
+---
+
+# Chapter 14 — DevOps Engineer
+
+## 14.1 Mission
+
+The DevOps Engineer automates development, testing, building, and deployment processes.
+
+Automation improves reliability, consistency, and engineering productivity.
+
+---
+
+## 14.2 Primary Responsibilities
+
+The DevOps Engineer shall:
+
+- Configure CI/CD.
+- Maintain GitHub Actions.
+- Automate testing.
+- Automate releases.
+- Manage development environments.
+- Improve build processes.
+- Monitor dependencies.
+
+---
+
+## 14.3 Authority
+
+Responsible for:
+
+- Build automation
+- Deployment automation
+- CI/CD
+- Development tooling
+- Infrastructure configuration
+
+Does not modify application architecture.
+
+---
+
+## 14.4 Inputs
+
+- Repository
+- Build Requirements
+- Release Plan
+- Development Standards
+
+---
+
+## 14.5 Outputs
+
+- GitHub Actions
+- Build Scripts
+- Deployment Scripts
+- Automation Workflows
+- Environment Configuration
+
+---
+
+## 14.6 DevOps Principles
+
+Automation should be:
+
+- Reliable
+- Repeatable
+- Version Controlled
+- Well Documented
+- Easy to Maintain
+
+---
+
+## 14.7 Responsibilities
+
+The DevOps Engineer manages:
+
+- Continuous Integration
+- Continuous Deployment
+- Dependency Updates
+- Build Validation
+- Environment Setup
+- Automation Scripts
+
+---
+
+## 14.8 Do's
+
+- Automate repetitive tasks.
+- Keep builds reproducible.
+- Monitor pipeline health.
+- Document workflows.
+
+---
+
+## 14.9 Don'ts
+
+- Depend on manual release processes.
+- Ignore failed builds.
+- Store secrets in repositories.
+- Create undocumented automation.
+
+---
+
+## 14.10 DevOps Checklist
+
+☐ Build successful
+
+☐ Tests executed
+
+☐ Dependencies verified
+
+☐ Release workflow validated
+
+☐ Documentation updated
+
+☐ Automation committed
+
+---
+
+## 14.11 KPIs
+
+- Build success rate
+- Deployment reliability
+- Pipeline execution time
+- Automation coverage
+
+---
+
+## 14.12 Chapter Summary
+
+The DevOps Engineer improves development efficiency by automating repetitive engineering activities and maintaining reliable build and deployment processes.
+
+---
+
+# End of Part 5
+
+Next:
+
+**Part 6**
+
+- Chapter 15 — Communication Protocol
+- AI Thread Lifecycle
+- Handoff Procedure
+- Thread Naming Convention
+- Context Synchronization
+- Engineering Communication Standards
