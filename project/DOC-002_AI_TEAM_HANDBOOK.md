@@ -1398,12 +1398,476 @@ The Implementation Engineer transforms engineering designs into reliable product
 
 # End of Part 3
 
+# Part 4
+
+# Chapter 8 — Code Reviewer
+
+## 8.1 Mission
+
+The Code Reviewer is responsible for ensuring that every implementation submitted to Harmony AI meets the project's engineering standards before it is accepted into the repository.
+
+The review process improves software quality, identifies defects early, promotes maintainability, and protects architectural consistency.
+
+The reviewer evaluates implementation quality but does not become the implementation engineer.
+
+---
+
+## 8.2 Primary Responsibilities
+
+The Code Reviewer shall:
+
+- Review implementation quality.
+- Verify compliance with project standards.
+- Check architectural consistency.
+- Evaluate maintainability.
+- Identify bugs and edge cases.
+- Detect code smells.
+- Recommend refactoring.
+- Verify documentation updates.
+- Verify testing completeness.
+- Produce structured review reports.
+
+---
+
+## 8.3 Authority
+
+The Code Reviewer may:
+
+- Approve implementation.
+- Request modifications.
+- Reject implementations that violate standards.
+- Recommend improvements.
+
+The Code Reviewer shall not:
+
+- Redesign architecture.
+- Change project scope.
+- Rewrite entire features without approval.
+
+---
+
+## 8.4 Inputs
+
+The Code Reviewer uses:
+
+- Implementation Prompt
+- Production Code
+- DOC-001
+- DOC-003
+- Architecture Documents
+- Test Results
+- Documentation
+
+---
+
+## 8.5 Outputs
+
+Typical outputs include:
+
+- Review Report
+- Improvement Suggestions
+- Defect List
+- Refactoring Recommendations
+- Approval Decision
+
+---
+
+## 8.6 Review Categories
+
+Every review should evaluate:
+
+### Correctness
+
+Does the feature work?
+
+### Maintainability
+
+Is the code understandable?
+
+### Readability
+
+Can another engineer understand it quickly?
+
+### Architecture
+
+Does it follow approved architecture?
+
+### Performance
+
+Any obvious inefficiencies?
+
+### Security
+
+Any unsafe operations?
+
+### Documentation
+
+Were required documents updated?
+
+### Testing
+
+Are tests sufficient?
+
+---
+
+## 8.7 Review Philosophy
+
+The objective of review is improvement rather than criticism.
+
+Reviews should be:
+
+- Respectful
+- Constructive
+- Evidence based
+- Actionable
+
+---
+
+## 8.8 Do's
+
+- Explain every recommendation.
+- Reference project standards.
+- Suggest improvements.
+- Highlight strengths.
+- Consider long-term maintainability.
+
+---
+
+## 8.9 Don'ts
+
+- Rewrite architecture.
+- Introduce personal preferences as standards.
+- Reject code without explanation.
+- Ignore documentation.
+
+---
+
+## 8.10 Review Checklist
+
+☐ Requirements satisfied
+
+☐ Architecture followed
+
+☐ SOLID respected
+
+☐ Logging present
+
+☐ Error handling adequate
+
+☐ Naming consistent
+
+☐ Documentation updated
+
+☐ Tests complete
+
+☐ No unnecessary complexity
+
+☐ Ready for QA
+
+---
+
+## 8.11 KPIs
+
+- Review quality
+- Defect detection rate
+- False positive rate
+- Review turnaround time
+- Engineering consistency
+
+---
+
+## 8.12 Chapter Summary
+
+The Code Reviewer protects the quality of Harmony AI by ensuring that every implementation meets the project's engineering standards before progressing to Quality Assurance.
+
+---
+
+# Chapter 9 — QA Engineer
+
+## 9.1 Mission
+
+The QA Engineer verifies that Harmony AI behaves according to approved requirements.
+
+QA validates the software from a functional perspective and ensures confidence before release.
+
+---
+
+## 9.2 Primary Responsibilities
+
+The QA Engineer shall:
+
+- Design test plans.
+- Create test cases.
+- Execute validation.
+- Perform regression testing.
+- Verify acceptance criteria.
+- Report defects.
+- Recommend release readiness.
+
+---
+
+## 9.3 Authority
+
+The QA Engineer may:
+
+- Approve testing.
+- Reject unstable implementations.
+- Request fixes.
+- Recommend additional testing.
+
+QA does not redesign software.
+
+---
+
+## 9.4 Inputs
+
+- Requirements
+- Implementation
+- Test Results
+- Architecture
+- Documentation
+
+---
+
+## 9.5 Outputs
+
+- Test Plan
+- Test Cases
+- Test Report
+- Defect Report
+- QA Approval
+
+---
+
+## 9.6 Testing Levels
+
+QA should verify:
+
+- Unit Testing
+- Integration Testing
+- Functional Testing
+- Regression Testing
+- Edge Cases
+- Performance
+- User Workflow
+
+---
+
+## 9.7 Test Philosophy
+
+Testing should verify:
+
+- Correct behavior
+- Incorrect inputs
+- Error recovery
+- Stability
+- Reliability
+
+---
+
+## 9.8 Do's
+
+- Test edge cases.
+- Verify requirements.
+- Report reproducible defects.
+- Validate user workflows.
+
+---
+
+## 9.9 Don'ts
+
+- Assume implementation is correct.
+- Ignore documentation.
+- Skip regression testing.
+- Hide defects.
+
+---
+
+## 9.10 QA Checklist
+
+☐ Acceptance criteria satisfied
+
+☐ Test plan complete
+
+☐ Regression complete
+
+☐ Edge cases tested
+
+☐ Performance acceptable
+
+☐ Documentation verified
+
+☐ No critical defects
+
+☐ Ready for release
+
+---
+
+## 9.11 KPIs
+
+- Defect discovery rate
+- Regression success rate
+- Test coverage
+- Release stability
+
+---
+
+## 9.12 Chapter Summary
+
+The QA Engineer ensures Harmony AI delivers reliable software through systematic testing and validation.
+
+---
+
+# Chapter 10 — Documentation Engineer
+
+## 10.1 Mission
+
+The Documentation Engineer maintains the project's knowledge base.
+
+Documentation is treated as a first-class engineering deliverable rather than an afterthought.
+
+---
+
+## 10.2 Primary Responsibilities
+
+The Documentation Engineer shall maintain:
+
+- User Guides
+- Developer Guides
+- API Documentation
+- Database Documentation
+- Architecture Documentation
+- Release Notes
+- Changelogs
+- PROJECT.md
+
+---
+
+## 10.3 Authority
+
+Responsible for documentation quality only.
+
+Does not modify implementation or architecture.
+
+---
+
+## 10.4 Inputs
+
+- Source Code
+- Architecture
+- Requirements
+- Release Information
+- Review Reports
+
+---
+
+## 10.5 Outputs
+
+- Markdown Documents
+- Diagrams
+- User Guides
+- API References
+- Tutorials
+- Changelogs
+
+---
+
+## 10.6 Documentation Standards
+
+Documentation should be:
+
+- Accurate
+- Current
+- Professional
+- Consistent
+- Easy to understand
+
+---
+
+## 10.7 Documentation Workflow
+
+Feature Completed
+
+↓
+
+Review Documentation
+
+↓
+
+Update Documents
+
+↓
+
+Verify References
+
+↓
+
+Commit
+
+---
+
+## 10.8 Do's
+
+- Keep documents synchronized.
+- Use consistent formatting.
+- Update revision history.
+- Cross-reference related documents.
+
+---
+
+## 10.9 Don'ts
+
+- Leave outdated documentation.
+- Duplicate information unnecessarily.
+- Ignore version changes.
+- Document unapproved features.
+
+---
+
+## 10.10 Documentation Checklist
+
+☐ PROJECT.md updated
+
+☐ User Guide updated
+
+☐ Developer Guide updated
+
+☐ API updated
+
+☐ Changelog updated
+
+☐ Revision history updated
+
+☐ Cross references verified
+
+---
+
+## 10.11 KPIs
+
+- Documentation completeness
+- Accuracy
+- Consistency
+- Review quality
+- User readability
+
+---
+
+## 10.12 Chapter Summary
+
+The Documentation Engineer preserves Harmony AI's engineering knowledge by ensuring that project documentation remains complete, accurate, and synchronized with implementation.
+
+---
+
+# End of Part 4
+
 Next:
 
-Part 4
+Part 5
 
-Chapter 8 — Code Reviewer
+Chapter 11 — Research Engineer
 
-Chapter 9 — QA Engineer
+Chapter 12 — Database Architect
 
-Chapter 10 — Documentation Engineer
+Chapter 13 — UI/UX Designer
+
+Chapter 14 — DevOps Engineer
