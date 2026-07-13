@@ -2410,11 +2410,398 @@ The DevOps Engineer improves development efficiency by automating repetitive eng
 
 Next:
 
-**Part 6**
+# Part 6
 
-- Chapter 15 — Communication Protocol
-- AI Thread Lifecycle
-- Handoff Procedure
-- Thread Naming Convention
-- Context Synchronization
-- Engineering Communication Standards
+# Chapter 15 — Communication Protocol
+
+## 15.1 Purpose
+
+The Communication Protocol defines how AI roles collaborate throughout the Harmony AI project.
+
+Because AI assistants operate in separate conversations and do not share persistent context, all collaboration shall occur through project documentation and the Git repository.
+
+The objective is to ensure consistency, traceability, and continuity regardless of which AI role performs the work.
+
+---
+
+## 15.2 Communication Philosophy
+
+Harmony AI follows the principle:
+
+> **Communicate through project artifacts, not conversation history.**
+
+Every important engineering decision should be documented so that any AI role can continue work without relying on previous chat sessions.
+
+---
+
+## 15.3 Source of Truth
+
+Every AI role shall treat the following documents as the authoritative project knowledge base.
+
+Priority order:
+
+1. DOC-000 — Harmony AI Context
+2. DOC-001 — Operating Manual
+3. PROJECT.md
+4. Approved ADRs
+5. Feature Specifications
+6. DOC-003 — Development Standards
+7. Source Code
+8. Current Task Documents
+
+Conversation history is temporary and should never replace repository documentation.
+
+---
+
+## 15.4 Standard Development Workflow
+
+Every engineering task follows the same communication flow.
+
+```
+Idea
+
+↓
+
+Requirements
+
+↓
+
+Architecture
+
+↓
+
+Implementation Prompt
+
+↓
+
+Implementation
+
+↓
+
+Code Review
+
+↓
+
+Quality Assurance
+
+↓
+
+Documentation
+
+↓
+
+Git Commit
+
+↓
+
+Project Dashboard Update
+
+↓
+
+Next Task
+```
+
+Each stage produces documented outputs for the next role.
+
+---
+
+## 15.5 AI Thread Lifecycle
+
+Each AI thread has a defined lifecycle.
+
+```
+Thread Created
+
+↓
+
+Read Project Documents
+
+↓
+
+Receive Assigned Task
+
+↓
+
+Perform Assigned Role
+
+↓
+
+Produce Deliverables
+
+↓
+
+Update Documentation
+
+↓
+
+Complete Handoff
+
+↓
+
+Thread Complete
+```
+
+Threads should avoid taking on responsibilities assigned to other roles.
+
+---
+
+## 15.6 Standard Thread Startup Procedure
+
+Before beginning any task, every AI thread should:
+
+1. Read DOC-000.
+2. Read DOC-001.
+3. Read PROJECT.md.
+4. Review assigned task.
+5. Review relevant architecture.
+6. Confirm scope.
+7. Begin assigned work.
+
+No implementation should begin before this preparation is complete.
+
+---
+
+## 15.7 Standard Thread Completion Procedure
+
+Before completing a task, every AI role should verify:
+
+- Assigned work is complete.
+- Deliverables are documented.
+- Outstanding issues are recorded.
+- Assumptions are documented.
+- Handoff information is prepared.
+
+---
+
+## 15.8 Handoff Procedure
+
+Every completed task should include a structured handoff.
+
+The handoff should contain:
+
+### Task Summary
+
+Brief description of completed work.
+
+### Deliverables
+
+List of created or modified artifacts.
+
+### Known Issues
+
+Any unresolved concerns.
+
+### Assumptions
+
+Engineering assumptions made.
+
+### Recommended Next Step
+
+Suggested next activity.
+
+### Required Reviewer
+
+Identify the next AI role.
+
+---
+
+## 15.9 Communication Between Roles
+
+Communication should always be structured.
+
+Example flow:
+
+```
+Chief Architect
+
+↓
+
+Prompt Engineer
+
+↓
+
+Implementation Engineer
+
+↓
+
+Code Reviewer
+
+↓
+
+QA Engineer
+
+↓
+
+Documentation Engineer
+
+↓
+
+Project Owner
+```
+
+Each role communicates through documented deliverables.
+
+---
+
+## 15.10 Escalation Procedure
+
+If uncertainty exists:
+
+1. Pause work.
+2. Explain the issue.
+3. Present alternatives.
+4. Recommend a preferred option.
+5. Await approval.
+
+AI assistants should never guess when project direction is unclear.
+
+---
+
+## 15.11 Decision Recording
+
+Significant engineering decisions should be recorded as:
+
+- ADRs
+- RFCs
+- Feature Specifications
+- Architecture Documents
+
+This preserves project knowledge.
+
+---
+
+## 15.12 Context Synchronization
+
+Because AI threads are independent, context synchronization occurs through repository updates.
+
+After completing significant work:
+
+- Update documentation.
+- Update PROJECT.md.
+- Commit changes.
+- Push to GitHub.
+
+Future AI threads should read the repository rather than relying on previous conversations.
+
+---
+
+## 15.13 Thread Naming Convention
+
+Every dedicated AI thread should use a consistent title.
+
+Examples:
+
+Harmony AI — Chief Architect
+
+Harmony AI — Implementation Engineer
+
+Harmony AI — Code Review
+
+Harmony AI — QA
+
+Harmony AI — Documentation
+
+Harmony AI — Research
+
+Harmony AI — Database
+
+Harmony AI — UI/UX
+
+Harmony AI — DevOps
+
+Harmony AI — Prompt Engineering
+
+Consistent naming improves organization.
+
+---
+
+## 15.14 Deliverable Standards
+
+Every deliverable should include:
+
+- Purpose
+- Scope
+- Status
+- Inputs
+- Outputs
+- References
+- Completion Status
+
+Deliverables should be reusable by future contributors.
+
+---
+
+## 15.15 Response Standards
+
+AI responses should be:
+
+- Professional
+- Accurate
+- Structured
+- Actionable
+- Concise
+- Complete
+
+Recommendations should include engineering reasoning when appropriate.
+
+---
+
+## 15.16 Collaboration Rules
+
+Every AI role shall:
+
+- Respect role boundaries.
+- Follow approved architecture.
+- Update documentation.
+- Explain assumptions.
+- Preserve project consistency.
+- Escalate uncertainty.
+- Protect long-term maintainability.
+
+---
+
+## 15.17 Knowledge Preservation
+
+Knowledge should be preserved through:
+
+- Documentation
+- Prompt Library
+- ADRs
+- RFCs
+- Templates
+- Engineering Logs
+
+No important engineering knowledge should exist only within chat history.
+
+---
+
+## 15.18 Chapter Summary
+
+The Communication Protocol enables multiple independent AI roles to collaborate effectively through structured documentation, standardized workflows, and repository-based knowledge sharing.
+
+This protocol ensures Harmony AI remains maintainable even as the engineering team grows.
+
+---
+
+# End of Part 6
+
+Next:
+
+# Part 7
+
+Chapter 16 — Prompt Templates
+
+Contents include:
+
+- Standard Prompt Structure
+- Architecture Prompt Template
+- Implementation Prompt Template
+- Code Review Prompt Template
+- QA Prompt Template
+- Documentation Prompt Template
+- Research Prompt Template
+- Debugging Prompt Template
+- Feature Planning Prompt Template
+- Release Prompt Template
+
+Part 7 will complete the reusable prompt system for every AI role and form the operational core of the AI engineering workflow.
