@@ -2737,20 +2737,354 @@ Next:
 
 # Part VII — Appendices & Final Approval
 
-Contents:
+# Chapter 31 — Recommended Development Tools
 
-31. Recommended Development Tools
+## 31.1 Purpose
 
-32. Recommended Project Configuration
+Harmony AI standardizes on a common set of development tools to improve consistency, productivity, and collaboration.
 
-33. Coding Anti-Patterns
+Using the same toolchain simplifies onboarding, troubleshooting, and automation.
 
-34. Engineering Glossary
+---
 
-35. Document Maintenance
+## 31.2 Core Development Tools
 
-36. Final Summary
+| Category | Standard Tool |
+|----------|---------------|
+| IDE | Visual Studio Code |
+| Programming Language | Python 3.12+ |
+| Version Control | Git |
+| Repository Hosting | GitHub |
+| Desktop Framework | PySide6 |
+| Mobile Framework | Flutter |
+| Database | SQLite |
+| ORM | SQLAlchemy |
+| Testing | PyTest |
+| Formatter | Black |
+| Linter | Ruff |
+| Documentation | MkDocs |
+| CI/CD | GitHub Actions |
 
-37. Approval & Revision History
+---
 
-End of DOC-003
+## 31.3 Supporting Libraries
+
+Approved core libraries include:
+
+- Mutagen
+- MusicBrainz
+- RapidFuzz
+- FFmpeg
+- Pillow
+- Pydantic
+- Alembic
+
+Additional dependencies require architectural review before adoption.
+
+---
+
+## 31.4 Development Environment
+
+The recommended development environment includes:
+
+- Windows 11
+- Visual Studio Code
+- Python Virtual Environment
+- Git
+- GitHub Desktop (optional)
+- PowerShell
+
+The project should remain cross-platform whenever practical.
+
+---
+
+## 31.5 Chapter Summary
+
+A standardized development environment reduces inconsistencies and improves collaboration across contributors.
+
+---
+
+# Chapter 32 — Recommended Project Configuration
+
+## 32.1 Purpose
+
+Project configuration ensures consistent behavior across development environments.
+
+Configuration should be version controlled where appropriate and documented.
+
+---
+
+## 32.2 Standard Configuration Files
+
+Typical configuration files include:
+
+- pyproject.toml
+- requirements.txt
+- .gitignore
+- .editorconfig
+- pytest.ini
+- mkdocs.yml
+- .env.example
+
+---
+
+## 32.3 Code Formatting
+
+Source code formatting should be automated.
+
+Formatting should never depend on individual developer preferences.
+
+---
+
+## 32.4 Static Analysis
+
+Static analysis should execute before merging changes.
+
+Warnings should be addressed promptly.
+
+---
+
+## 32.5 Chapter Summary
+
+Consistent configuration improves reproducibility and simplifies project maintenance.
+
+---
+
+# Chapter 33 — Coding Anti-Patterns
+
+## 33.1 Purpose
+
+This chapter identifies practices that should be avoided throughout Harmony AI.
+
+Avoiding anti-patterns improves maintainability and software quality.
+
+---
+
+## 33.2 Common Anti-Patterns
+
+Avoid:
+
+- God Classes
+- God Functions
+- Circular Dependencies
+- Deep Nesting
+- Magic Numbers
+- Hardcoded Paths
+- Duplicate Code
+- Global Mutable State
+- Silent Exception Handling
+- Unused Code
+
+---
+
+## 33.3 Premature Optimization
+
+Do not optimize code before identifying a measurable performance issue.
+
+Optimization should be driven by profiling and evidence.
+
+---
+
+## 33.4 Overengineering
+
+Avoid unnecessary complexity.
+
+Implement the simplest solution that satisfies current requirements while remaining extensible.
+
+---
+
+## 33.5 Technical Debt
+
+If technical debt is intentionally introduced, document:
+
+- Reason
+- Scope
+- Expected impact
+- Resolution plan
+
+Technical debt should be tracked until resolved.
+
+---
+
+## 33.6 Chapter Summary
+
+Recognizing and avoiding anti-patterns contributes to a cleaner, more maintainable codebase.
+
+---
+
+# Chapter 34 — Engineering Glossary
+
+## 34.1 Purpose
+
+The glossary establishes consistent terminology across the project.
+
+---
+
+## 34.2 Definitions
+
+### ADR
+
+Architecture Decision Record.
+
+---
+
+### API
+
+Application Programming Interface.
+
+---
+
+### CI/CD
+
+Continuous Integration and Continuous Deployment.
+
+---
+
+### Dependency Injection
+
+Providing dependencies externally rather than constructing them internally.
+
+---
+
+### Domain Layer
+
+Contains business entities, rules, and interfaces.
+
+---
+
+### Infrastructure Layer
+
+Contains external systems and implementation details.
+
+---
+
+### Repository
+
+An abstraction over data persistence.
+
+---
+
+### DTO
+
+Data Transfer Object.
+
+---
+
+### PRD
+
+Product Requirements Document.
+
+---
+
+### SOLID
+
+Five object-oriented design principles promoting maintainable software.
+
+---
+
+### Clean Architecture
+
+Architectural style emphasizing separation of concerns and dependency direction.
+
+---
+
+## 34.3 Chapter Summary
+
+Consistent terminology improves communication and reduces ambiguity across the project.
+
+---
+
+# Chapter 35 — Document Maintenance
+
+## 35.1 Purpose
+
+Development Standards are living documentation.
+
+As Harmony AI evolves, these standards should be reviewed and updated to reflect current engineering practices.
+
+---
+
+## 35.2 Review Frequency
+
+Review this document:
+
+- Before major releases.
+- After significant architectural changes.
+- When adopting new technologies.
+- When engineering practices evolve.
+
+---
+
+## 35.3 Revision Process
+
+Every revision should include:
+
+- Version number
+- Revision date
+- Summary of changes
+- Approval record
+
+Only approved revisions become official project standards.
+
+---
+
+## 35.4 Ownership
+
+The Chief Architect maintains this document.
+
+The Project Owner approves significant revisions.
+
+---
+
+## 35.5 Chapter Summary
+
+Regular maintenance ensures the Development Standards remain accurate, relevant, and effective.
+
+---
+
+# Chapter 36 — Final Summary
+
+Harmony AI is developed according to consistent engineering standards that prioritize maintainability, scalability, readability, and long-term sustainability.
+
+These standards establish a common engineering language for all contributors, ensuring that software quality remains consistent throughout the project's lifecycle.
+
+Every contributor is expected to understand and follow these standards before contributing code.
+
+---
+
+# Chapter 37 — Approval
+
+## Document Status
+
+Current Status:
+
+Draft
+
+This document shall become **Approved** following project review and acceptance by the Project Owner.
+
+---
+
+## Approval Record
+
+| Role | Name | Status |
+|------|------|--------|
+| Project Owner | Project Owner | Pending |
+| Chief Architect | Chief Architect | Approved |
+
+---
+
+## Revision History
+
+| Version | Date | Description | Author |
+|----------|------|-------------|--------|
+|1.0.0|2026-07-13|Initial Draft|Chief Architect|
+
+---
+
+# End of Document
+
+**DOC-003 — Development Standards**
+
+Version 1.0.0
+
+End of File
