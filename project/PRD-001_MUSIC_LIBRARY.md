@@ -885,16 +885,311 @@ Next:
 
 # Part IV — User Experience
 
-Chapters:
+# Part IV — User Experience
 
-16. User Stories
+# Chapter 16 — User Stories
 
-17. Acceptance Criteria
+## 16.1 Purpose
 
-18. Out of Scope
+User Stories describe the expected behavior of the Music Library from the user's perspective.
 
-19. Future Enhancements
+These stories guide architecture, implementation, testing, and future enhancements.
 
-20. PRD Summary
+---
 
-This will complete **PRD-001 — Music Library Management System**.
+## 16.2 Library Discovery
+
+### US-001
+
+**As a user, I want Harmony AI to scan one or more music folders so that my entire collection is automatically imported into the library.**
+
+Priority: High
+
+---
+
+### US-002
+
+**As a user, I want Harmony AI to automatically detect newly added music files without requiring a full library scan.**
+
+Priority: High
+
+---
+
+### US-003
+
+**As a user, I want Harmony AI to detect deleted or moved songs so that my library always reflects my actual collection.**
+
+Priority: High
+
+---
+
+## 16.3 Metadata
+
+### US-004
+
+**As a user, I want Harmony AI to read all available metadata from my music files so that my collection is organized correctly.**
+
+Priority: High
+
+---
+
+### US-005
+
+**As a user, I want Harmony AI to identify missing or inconsistent metadata so that I can improve my music library.**
+
+Priority: Medium
+
+---
+
+## 16.4 Artwork
+
+### US-006
+
+**As a user, I want Harmony AI to display album artwork whenever available so that browsing my library is visually appealing.**
+
+Priority: High
+
+---
+
+## 16.5 Duplicate Detection
+
+### US-007
+
+**As a user, I want Harmony AI to identify duplicate songs without deleting them automatically so that I remain in control of my collection.**
+
+Priority: High
+
+---
+
+## 16.6 Statistics
+
+### US-008
+
+**As a user, I want Harmony AI to generate statistics about my music library so that I better understand my collection.**
+
+Priority: Medium
+
+---
+
+## 16.7 Future AI
+
+### US-009
+
+**As a user, I want the Music Library to provide high-quality data for future AI recommendations and semantic search.**
+
+Priority: High
+
+---
+
+# Chapter 17 — Acceptance Criteria
+
+## 17.1 Library Scan
+
+The Music Library shall:
+
+☐ Discover supported audio files.
+
+☐ Ignore unsupported files.
+
+☐ Detect new files.
+
+☐ Detect deleted files.
+
+☐ Detect modified files.
+
+☐ Update the database accordingly.
+
+---
+
+## 17.2 Metadata
+
+The system shall:
+
+☐ Read supported metadata fields.
+
+☐ Preserve extracted metadata.
+
+☐ Detect missing metadata.
+
+☐ Handle invalid metadata gracefully.
+
+---
+
+## 17.3 Artwork
+
+The system shall:
+
+☐ Display embedded artwork.
+
+☐ Detect folder artwork.
+
+☐ Associate artwork with albums.
+
+☐ Cache artwork efficiently.
+
+---
+
+## 17.4 Duplicate Detection
+
+The system shall:
+
+☐ Detect duplicate candidates.
+
+☐ Present duplicates to the user.
+
+☐ Never remove files automatically.
+
+---
+
+## 17.5 Statistics
+
+The system shall generate:
+
+☐ Song count
+
+☐ Album count
+
+☐ Artist count
+
+☐ Genre count
+
+☐ Library size
+
+☐ Total duration
+
+☐ Audio format distribution
+
+---
+
+## 17.6 Quality
+
+The implementation shall satisfy:
+
+☐ DOC-003 Development Standards
+
+☐ Code Review
+
+☐ QA Approval
+
+☐ Documentation Updates
+
+☐ Passing Tests
+
+---
+
+# Chapter 18 — Out of Scope
+
+The following features are intentionally excluded from PRD-001 and will be addressed in future project phases.
+
+## Streaming Services
+
+Harmony AI shall not:
+
+- Download copyrighted music.
+- Replace streaming services.
+- Circumvent DRM.
+- Integrate with unauthorized sources.
+
+---
+
+## Playback
+
+Audio playback remains the responsibility of external music players during the initial project phases.
+
+Harmony AI focuses on library intelligence rather than media playback.
+
+---
+
+## AI Recommendations
+
+Recommendation generation belongs to a later project phase.
+
+The Music Library provides the data foundation but does not generate recommendations.
+
+---
+
+## Cloud Synchronization
+
+Cloud synchronization is outside the scope of this PRD.
+
+---
+
+## Mobile Applications
+
+Android and other mobile applications are addressed in future project phases.
+
+---
+
+# Chapter 19 — Future Enhancements
+
+Future releases may include:
+
+- Automatic metadata correction
+- AI-powered metadata completion
+- Semantic music search
+- Audio fingerprinting
+- Duplicate resolution assistant
+- MusicBrainz synchronization
+- Online artwork retrieval
+- Lyrics synchronization
+- Multi-user libraries
+- Plugin support
+- Cloud synchronization
+- Recommendation engine integration
+- Listening history synchronization
+- Audio quality analysis
+- Library health scoring
+
+These enhancements build upon the Music Library but are not required for the initial release.
+
+---
+
+# Chapter 20 — PRD Summary
+
+The Music Library Management System establishes the foundation of Harmony AI.
+
+It provides a reliable, scalable, and privacy-focused platform for managing personal music collections.
+
+By accurately discovering audio files, maintaining metadata, organizing artwork, identifying duplicates, and generating statistics, the Music Library becomes the trusted source of information for all higher-level Harmony AI features.
+
+Future modules—including recommendations, semantic search, cloud synchronization, analytics, and AI assistants—will depend upon the quality and integrity of this foundational component.
+
+---
+
+# Product Approval
+
+## Status
+
+Current Status:
+
+Draft
+
+This document shall become **Approved** after architectural review and acceptance by the Project Owner.
+
+---
+
+## Approval Record
+
+| Role | Name | Status |
+|------|------|--------|
+| Project Owner | Project Owner | Pending |
+| Chief Architect | Chief Architect | Approved |
+| Product Manager | Product Manager | Approved |
+
+---
+
+## Revision History
+
+| Version | Date | Description | Author |
+|----------|------|-------------|--------|
+| 1.0.0 | 2026-07-13 | Initial Draft | Product Manager |
+
+---
+
+# End of Document
+
+**PRD-001 — Music Library Management System**
+
+Version 1.0.0
+
+End of File
