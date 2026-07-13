@@ -351,3 +351,406 @@ Next:
 
 Part 2 — Daily Development Workflow
 
+# Part II — Daily Development Workflow
+
+# Chapter 6 — Starting Development
+
+## 6.1 Purpose
+
+This chapter defines the standard procedure for starting a development session.
+
+Following a consistent startup process reduces mistakes, ensures the local repository is up to date, and provides awareness of the current project status.
+
+---
+
+## 6.2 Daily Startup Routine
+
+Before beginning any implementation work, complete the following sequence:
+
+1. Open the Harmony AI workspace.
+2. Open PROJECT.md.
+3. Review the current milestone.
+4. Review the current task.
+5. Pull the latest repository changes.
+6. Verify the active branch.
+7. Review assigned documentation.
+8. Begin development.
+
+---
+
+## 6.3 Review Current Status
+
+Before writing code, review:
+
+- Current milestone
+- Current sprint
+- Open issues
+- Pending pull requests
+- Known technical debt
+- Architecture Decision Records (ADRs)
+
+Understanding the current project state reduces duplication and conflicting changes.
+
+---
+
+## 6.4 Verify Development Environment
+
+Confirm:
+
+- Virtual environment is active.
+- Required dependencies are installed.
+- Repository is synchronized.
+- No unexpected local changes exist.
+
+---
+
+## 6.5 Session Goals
+
+Every development session should have a clearly defined objective.
+
+Examples:
+
+- Implement one feature.
+- Fix one defect.
+- Improve one module.
+- Update one document.
+
+Avoid working on multiple unrelated tasks simultaneously.
+
+---
+
+## 6.6 Chapter Summary
+
+A structured startup routine establishes consistency and reduces development errors.
+
+---
+
+# Chapter 7 — Branching Strategy
+
+## 7.1 Purpose
+
+Harmony AI uses Git to manage source code and documentation.
+
+A consistent branching strategy improves collaboration and protects the stability of the main branch.
+
+---
+
+## 7.2 Primary Branches
+
+The repository maintains the following permanent branches:
+
+- main
+- develop
+
+Future release branches may be introduced as the project grows.
+
+---
+
+## 7.3 Feature Branches
+
+Every new feature should be developed in its own branch.
+
+Naming convention:
+
+```
+feature/<feature-name>
+```
+
+Examples:
+
+```
+feature/library-scanner
+
+feature/metadata-parser
+
+feature/cloud-sync
+```
+
+---
+
+## 7.4 Bug Fix Branches
+
+Naming convention:
+
+```
+bugfix/<issue-name>
+```
+
+Examples:
+
+```
+bugfix/duplicate-detection
+
+bugfix/database-lock
+```
+
+---
+
+## 7.5 Documentation Branches
+
+Naming convention:
+
+```
+docs/<document-name>
+```
+
+Examples:
+
+```
+docs/doc-005
+
+docs/user-guide
+```
+
+---
+
+## 7.6 Branch Lifecycle
+
+Typical workflow:
+
+```
+develop
+
+↓
+
+Create Feature Branch
+
+↓
+
+Implementation
+
+↓
+
+Review
+
+↓
+
+QA
+
+↓
+
+Merge into develop
+
+↓
+
+Release
+
+↓
+
+Merge into main
+```
+
+---
+
+## 7.7 Branch Protection
+
+The main branch should remain stable.
+
+Direct commits to the main branch should be avoided except for approved releases.
+
+---
+
+## 7.8 Chapter Summary
+
+A disciplined branching strategy improves collaboration, traceability, and release quality.
+
+---
+
+# Chapter 8 — Updating the Repository
+
+## 8.1 Purpose
+
+Keeping the local repository synchronized reduces merge conflicts and ensures contributors work with the latest approved changes.
+
+---
+
+## 8.2 Before Starting Work
+
+Before beginning implementation:
+
+- Pull latest changes.
+- Review commit history.
+- Verify branch status.
+- Resolve outstanding merge conflicts.
+
+---
+
+## 8.3 During Development
+
+Commit changes regularly.
+
+Small, focused commits are preferred over large commits containing unrelated changes.
+
+---
+
+## 8.4 Before Ending the Day
+
+Before finishing a session:
+
+- Commit completed work.
+- Push changes.
+- Update PROJECT.md if required.
+- Verify repository status.
+
+---
+
+## 8.5 Chapter Summary
+
+Frequent synchronization keeps the project healthy and minimizes integration issues.
+
+---
+
+# Chapter 9 — Running the Project
+
+## 9.1 Purpose
+
+Every contributor should be able to verify that the application starts correctly after making changes.
+
+---
+
+## 9.2 Startup Verification
+
+Before implementing new features:
+
+- Activate the virtual environment.
+- Verify dependencies.
+- Run the application.
+- Confirm there are no startup errors.
+
+---
+
+## 9.3 Validation
+
+After implementation:
+
+Verify:
+
+- Application launches.
+- New functionality operates correctly.
+- Existing functionality remains unaffected.
+
+---
+
+## 9.4 Smoke Testing
+
+Perform a quick smoke test after significant changes.
+
+Typical checks include:
+
+- Application startup
+- Database connection
+- Library loading
+- User interface responsiveness
+
+---
+
+## 9.5 Chapter Summary
+
+Frequent execution of the application helps identify problems early in the development cycle.
+
+---
+
+# Chapter 10 — Running Tests
+
+## 10.1 Purpose
+
+Testing verifies that Harmony AI behaves according to approved requirements.
+
+All contributors should execute appropriate tests before submitting changes.
+
+---
+
+## 10.2 Test Types
+
+Harmony AI includes:
+
+- Unit Tests
+- Integration Tests
+- Functional Tests
+- Regression Tests
+- Performance Tests
+
+---
+
+## 10.3 Test Workflow
+
+Standard testing process:
+
+```
+Implementation
+
+↓
+
+Unit Tests
+
+↓
+
+Integration Tests
+
+↓
+
+Regression Tests
+
+↓
+
+QA
+
+↓
+
+Merge
+```
+
+---
+
+## 10.4 Failed Tests
+
+If a test fails:
+
+1. Investigate the cause.
+2. Correct the issue.
+3. Re-run affected tests.
+4. Verify no regressions.
+
+Never ignore failing tests.
+
+---
+
+## 10.5 Before Commit
+
+Before committing changes, verify:
+
+☐ Tests completed
+
+☐ No failing tests
+
+☐ Documentation updated
+
+☐ Code formatted
+
+☐ Linting passed
+
+---
+
+## 10.6 Chapter Summary
+
+Routine testing ensures Harmony AI remains reliable as the project grows.
+
+---
+
+# End of Part 2
+
+Next:
+
+# Part III — Engineering Workflow
+
+Chapters:
+
+11. Creating New Features
+
+12. AI Development Workflow
+
+13. Documentation Workflow
+
+14. Commit Workflow
+
+15. Pull Request Workflow
