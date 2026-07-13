@@ -830,14 +830,500 @@ Following these standards improves readability, maintainability, tooling support
 
 **Next: Part 3 — Architecture Standards**
 
-Chapters:
+# Part III — Architecture Standards
 
-11. Clean Architecture
+# Chapter 11 — Clean Architecture
 
-12. SOLID Principles
+## 11.1 Purpose
 
-13. Repository Pattern
+Harmony AI adopts Clean Architecture to ensure that business rules remain independent of frameworks, user interfaces, databases, and external services.
 
-14. Dependency Injection
+This architecture enables long-term maintainability, testability, and flexibility.
 
-15. Event-Driven Architecture
+---
+
+## 11.2 Architecture Philosophy
+
+Business rules represent the heart of the application.
+
+External technologies are implementation details and should not influence business logic.
+
+Harmony AI is designed so that technologies may change without requiring changes to the core application logic.
+
+---
+
+## 11.3 Architectural Layers
+
+Harmony AI consists of four primary layers.
+
+```
+Presentation
+
+↓
+
+Application
+
+↓
+
+Domain
+
+↓
+
+Infrastructure
+```
+
+Dependencies always point inward.
+
+---
+
+## 11.4 Domain Layer
+
+The Domain Layer contains:
+
+- Business Entities
+- Value Objects
+- Business Rules
+- Interfaces
+- Domain Services
+
+The Domain Layer must not depend upon:
+
+- Database
+- GUI
+- FastAPI
+- SQLAlchemy
+- Flutter
+- PySide6
+- AI Providers
+
+---
+
+## 11.5 Application Layer
+
+The Application Layer coordinates business operations.
+
+Responsibilities include:
+
+- Use Cases
+- Commands
+- Queries
+- Services
+- Validation
+- Workflow orchestration
+
+Application logic may depend on Domain interfaces but never Infrastructure implementations.
+
+---
+
+## 11.6 Infrastructure Layer
+
+Infrastructure contains implementation details.
+
+Examples:
+
+- SQLite
+- SQLAlchemy
+- File System
+- MusicBrainz
+- FFmpeg
+- Cloud Providers
+- Logging
+- Configuration
+- Repository Implementations
+
+Infrastructure depends on Application and Domain.
+
+---
+
+## 11.7 Presentation Layer
+
+Presentation provides user interaction.
+
+Examples:
+
+- Desktop UI
+- Android UI
+- REST API
+- CLI
+- Future Web Interface
+
+Presentation should remain thin.
+
+Business logic belongs elsewhere.
+
+---
+
+## 11.8 Dependency Rule
+
+Dependencies shall always move toward the Domain Layer.
+
+Never allow:
+
+Domain
+
+↓
+
+Infrastructure
+
+Correct:
+
+Infrastructure
+
+↓
+
+Domain
+
+---
+
+## 11.9 Layer Communication
+
+Layers communicate through:
+
+- Interfaces
+- DTOs
+- Commands
+- Events
+
+Avoid exposing implementation details across layers.
+
+---
+
+## 11.10 Chapter Summary
+
+Clean Architecture separates business logic from implementation details, ensuring Harmony AI remains flexible and maintainable throughout its lifetime.
+
+---
+
+# Chapter 12 — SOLID Principles
+
+## 12.1 Purpose
+
+SOLID principles improve software quality by encouraging maintainable, extensible, and testable designs.
+
+Harmony AI uses SOLID as architectural guidance rather than rigid rules.
+
+---
+
+## 12.2 Single Responsibility Principle
+
+Every class should have one primary responsibility.
+
+Avoid classes responsible for:
+
+- Database
+- UI
+- Business Logic
+- Logging
+- Configuration
+
+simultaneously.
+
+---
+
+## 12.3 Open / Closed Principle
+
+Software should be:
+
+Open for extension.
+
+Closed for modification.
+
+Prefer extension mechanisms such as:
+
+- Plugins
+- Interfaces
+- Strategy Pattern
+- Configuration
+
+---
+
+## 12.4 Liskov Substitution Principle
+
+Derived classes should behave consistently with their base classes.
+
+Consumers should not require knowledge of specific implementations.
+
+---
+
+## 12.5 Interface Segregation Principle
+
+Prefer multiple small interfaces over one large interface.
+
+Interfaces should remain focused.
+
+---
+
+## 12.6 Dependency Inversion Principle
+
+Depend upon abstractions.
+
+Avoid depending directly upon concrete implementations.
+
+Use interfaces wherever practical.
+
+---
+
+## 12.7 SOLID Review Checklist
+
+Before implementation verify:
+
+☐ One responsibility
+
+☐ Interfaces defined
+
+☐ Dependencies inverted
+
+☐ Extensible design
+
+☐ Small focused classes
+
+---
+
+## 12.8 Chapter Summary
+
+SOLID provides practical design guidance that supports Harmony AI's long-term maintainability.
+
+---
+
+# Chapter 13 — Repository Pattern
+
+## 13.1 Purpose
+
+Repositories separate business logic from data storage.
+
+Application code should never directly access database implementations.
+
+---
+
+## 13.2 Responsibilities
+
+Repositories manage:
+
+- Retrieval
+- Storage
+- Updates
+- Deletion
+- Queries
+
+Business logic remains outside repositories.
+
+---
+
+## 13.3 Repository Rules
+
+Repositories should:
+
+- Hide persistence details.
+- Return domain objects.
+- Be independently testable.
+- Support dependency injection.
+
+---
+
+## 13.4 Naming Convention
+
+Examples:
+
+```
+SongRepository
+
+AlbumRepository
+
+ArtistRepository
+
+PlaylistRepository
+```
+
+Implementation classes:
+
+```
+SQLiteSongRepository
+
+SQLiteAlbumRepository
+```
+
+---
+
+## 13.5 Repository Interfaces
+
+Interfaces belong in:
+
+Domain
+
+Implementations belong in:
+
+Infrastructure
+
+---
+
+## 13.6 Transactions
+
+Repositories should not contain business workflows.
+
+Transaction coordination belongs to Application Services.
+
+---
+
+## 13.7 Chapter Summary
+
+The Repository Pattern isolates persistence logic and improves maintainability and testability.
+
+---
+
+# Chapter 14 — Dependency Injection
+
+## 14.1 Purpose
+
+Dependency Injection reduces coupling by supplying dependencies externally rather than creating them internally.
+
+---
+
+## 14.2 Benefits
+
+Dependency Injection improves:
+
+- Testability
+- Maintainability
+- Flexibility
+- Modularity
+
+---
+
+## 14.3 Injection Methods
+
+Preferred order:
+
+1. Constructor Injection
+
+2. Factory Injection
+
+3. Method Injection
+
+Avoid global service locators.
+
+---
+
+## 14.4 Object Creation
+
+Business objects should avoid constructing dependencies directly.
+
+Construction belongs to composition roots.
+
+---
+
+## 14.5 Lifetime Management
+
+Dependencies should have clearly defined lifetimes.
+
+Examples:
+
+- Singleton
+- Scoped
+- Transient
+
+Use the simplest lifetime that satisfies requirements.
+
+---
+
+## 14.6 Testing
+
+Dependency Injection should simplify mocking during unit testing.
+
+---
+
+## 14.7 Chapter Summary
+
+Dependency Injection supports modular, testable software by reducing direct dependencies between components.
+
+---
+
+# Chapter 15 — Event-Driven Architecture
+
+## 15.1 Purpose
+
+Harmony AI uses events to reduce coupling between modules.
+
+Events allow independent components to react without direct knowledge of each other.
+
+---
+
+## 15.2 Event Philosophy
+
+Publish information.
+
+Avoid commanding unrelated modules.
+
+Prefer notifications over direct dependencies.
+
+---
+
+## 15.3 Suitable Events
+
+Examples include:
+
+- Library Scanned
+- Song Added
+- Metadata Updated
+- Playlist Created
+- Artwork Downloaded
+- Sync Completed
+
+---
+
+## 15.4 Event Rules
+
+Events should:
+
+- Be immutable.
+- Be descriptive.
+- Contain required context.
+- Avoid unnecessary payload.
+
+---
+
+## 15.5 Event Naming
+
+Use past-tense names.
+
+Examples:
+
+```
+SongImported
+
+MetadataUpdated
+
+PlaylistGenerated
+
+ArtworkCached
+```
+
+---
+
+## 15.6 Subscribers
+
+Subscribers should remain independent.
+
+One event may have multiple subscribers.
+
+Publishers should never know subscribers.
+
+---
+
+## 15.7 Event Bus
+
+Future versions may introduce a centralized event bus.
+
+All implementations should be compatible with this possibility.
+
+---
+
+## 15.8 Chapter Summary
+
+Event-Driven Architecture promotes loose coupling, modularity, and extensibility, supporting Harmony AI's long-term architectural goals.
+
+---
+
+# End of Part 3
+
+Next: Part 4 — Coding Standards
+
