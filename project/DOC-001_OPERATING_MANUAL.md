@@ -5,7 +5,7 @@
 | Document ID | DOC-001 |
 | Document Name | Harmony AI Operating Manual |
 | Version | 1.0.1 |
-| Status | Draft |
+| Status | Approved |
 | Owner | Project Owner |
 | Maintained By | Chief Architect |
 | Last Updated | 2026-07-13 |
