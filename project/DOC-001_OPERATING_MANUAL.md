@@ -1414,3 +1414,289 @@ This process promotes quality, maintainability, and consistency while enabling e
 ---
 
 **End of Chapter 5**
+---
+
+# Chapter 6 — AI Team Collaboration
+
+## 6.1 Purpose
+
+Harmony AI is developed through collaboration between the Project Owner and a team of specialized AI assistants.
+
+Each AI assistant performs a clearly defined engineering role, similar to members of a professional software development team.
+
+The objective of this collaboration model is to improve software quality, encourage specialization, reduce errors, and accelerate development while maintaining architectural consistency.
+
+---
+
+## 6.2 Collaboration Philosophy
+
+Artificial Intelligence is treated as an engineering partner rather than a replacement for human decision-making.
+
+AI assists with:
+
+- Planning
+- Architecture
+- Documentation
+- Prompt Engineering
+- Implementation
+- Code Review
+- Testing
+- Research
+
+The Project Owner remains responsible for all final technical and product decisions.
+
+---
+
+## 6.3 AI Team Structure
+
+Harmony AI uses specialized AI threads rather than a single general-purpose assistant.
+
+Each AI thread owns a specific responsibility.
+
+The planned AI team includes:
+
+- Chief Architect
+- Implementation Engineer
+- Code Reviewer
+- Debugging Specialist
+- QA Engineer
+- Documentation Engineer
+- UI/UX Designer
+- AI Engineer
+- Database Architect
+- DevOps Engineer
+- Research Engineer
+
+Additional specialized roles may be introduced as the project evolves.
+
+---
+
+## 6.4 Responsibilities
+
+Every AI role must understand:
+
+- Its responsibilities.
+- Its limitations.
+- Its expected outputs.
+- The documents it must read before beginning work.
+
+Role-specific responsibilities are defined in **DOC-002 – AI Team Handbook**.
+
+---
+
+## 6.5 Source of Truth
+
+AI assistants shall never rely solely on conversation history.
+
+Before performing work, every AI thread must use the project documentation as the authoritative source of information.
+
+Primary references include:
+
+- DOC-000
+- PROJECT.md
+- DOC-001
+- DOC-003
+- Approved ADRs
+- Feature specifications
+
+Repository documentation always takes precedence over conversation history.
+
+---
+
+## 6.6 Communication Workflow
+
+AI threads do not communicate directly.
+
+Communication occurs through project documentation and the Git repository.
+
+Typical workflow:
+
+```
+Chief Architect
+        │
+        ▼
+Architecture
+        │
+        ▼
+Implementation Prompt
+        │
+        ▼
+Implementation Engineer
+        │
+        ▼
+Code Review
+        │
+        ▼
+QA
+        │
+        ▼
+Documentation
+        │
+        ▼
+Git Repository
+```
+
+Every completed task should update the repository rather than relying on chat history.
+
+---
+
+## 6.7 Prompt-Driven Collaboration
+
+Prompts are considered engineering assets.
+
+Every implementation task should begin with a structured prompt prepared by the Chief Architect.
+
+Prompts should define:
+
+- Objective
+- Scope
+- Constraints
+- Files
+- Coding standards
+- Testing expectations
+- Acceptance criteria
+
+Reusable prompts shall be stored in the repository.
+
+---
+
+## 6.8 Responsibilities of the Project Owner
+
+The Project Owner is responsible for:
+
+- Defining product goals.
+- Reviewing architectural proposals.
+- Approving major changes.
+- Managing releases.
+- Maintaining documentation.
+- Coordinating AI collaboration.
+
+The Project Owner is the final decision maker.
+
+---
+
+## 6.9 Responsibilities of the Chief Architect
+
+The Chief Architect is responsible for:
+
+- System architecture.
+- Engineering standards.
+- Project planning.
+- Prompt engineering.
+- Feature decomposition.
+- Documentation review.
+- Long-term maintainability.
+
+The Chief Architect does not produce production code unless explicitly requested.
+
+---
+
+## 6.10 Responsibilities of Implementation AI
+
+Implementation AI focuses exclusively on producing production-quality code based on approved implementation prompts.
+
+Implementation AI should not independently modify:
+
+- Architecture
+- Requirements
+- Product scope
+- Engineering standards
+
+Unexpected discoveries should be reported rather than silently changing project design.
+
+---
+
+## 6.11 Responsibilities of Review AI
+
+Review AI evaluates implementation quality.
+
+Typical review topics include:
+
+- Readability
+- SOLID compliance
+- Performance
+- Security
+- Maintainability
+- Documentation
+- Testability
+
+Review AI should recommend improvements without changing project architecture.
+
+---
+
+## 6.12 Responsibilities of QA AI
+
+QA AI verifies software quality through:
+
+- Test planning
+- Edge-case identification
+- Regression analysis
+- Validation of acceptance criteria
+
+QA approval is required before considering a feature complete.
+
+---
+
+## 6.13 Documentation Responsibilities
+
+Documentation AI maintains:
+
+- User Guides
+- Developer Guides
+- API Documentation
+- Architecture Documentation
+- Release Notes
+- Changelogs
+
+Documentation should evolve alongside implementation.
+
+---
+
+## 6.14 Knowledge Management
+
+Important project knowledge should always be preserved within the repository.
+
+Knowledge includes:
+
+- ADRs
+- Lessons Learned
+- Technical Debt
+- Engineering Decisions
+- Prompt Library
+- Templates
+
+AI memory should never depend solely on conversation history.
+
+---
+
+## 6.15 Collaboration Rules
+
+Every AI participant shall:
+
+- Respect approved architecture.
+- Avoid undocumented assumptions.
+- Follow engineering standards.
+- Explain important decisions.
+- Prefer maintainability over complexity.
+- Update documentation when required.
+- Escalate uncertainty rather than guessing.
+
+---
+
+## 6.16 Continuous Learning
+
+As Harmony AI evolves, AI prompts, workflows, and engineering practices should continuously improve.
+
+Lessons learned should be documented to improve future development.
+
+---
+
+## 6.17 Chapter Summary
+
+Harmony AI treats Artificial Intelligence as a structured engineering team rather than a general-purpose assistant.
+
+Clearly defined responsibilities, documentation-driven communication, and prompt-based collaboration ensure consistency, maintainability, and professional software engineering practices throughout the lifetime of the project.
+
+---
+
+**End of Chapter 6**
