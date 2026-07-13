@@ -2804,4 +2804,773 @@ Contents include:
 - Feature Planning Prompt Template
 - Release Prompt Template
 
-Part 7 will complete the reusable prompt system for every AI role and form the operational core of the AI engineering workflow.
+# Part 7
+
+# Chapter 16 — Prompt Templates
+
+## 16.1 Purpose
+
+Prompt Templates standardize communication between AI roles.
+
+Every engineering task within Harmony AI should begin with a structured prompt rather than an informal request.
+
+Structured prompts improve:
+
+- Consistency
+- Quality
+- Accuracy
+- Repeatability
+- Engineering efficiency
+
+Prompt templates are engineering assets and should be maintained alongside project documentation.
+
+---
+
+## 16.2 Prompt Engineering Principles
+
+Every prompt should be:
+
+- Clear
+- Complete
+- Context-aware
+- Reusable
+- Unambiguous
+- Role-specific
+
+Prompts should define both expectations and constraints.
+
+---
+
+## 16.3 Standard Prompt Structure
+
+Every prompt should include the following sections.
+
+### Objective
+
+What must be accomplished?
+
+---
+
+### Context
+
+Current project status.
+
+Relevant documents.
+
+Existing implementation.
+
+---
+
+### Scope
+
+Exactly what is included.
+
+Exactly what is excluded.
+
+---
+
+### Inputs
+
+Documents
+
+Files
+
+Modules
+
+Dependencies
+
+---
+
+### Constraints
+
+Architecture
+
+Coding Standards
+
+Performance
+
+Security
+
+Documentation
+
+Testing
+
+---
+
+### Deliverables
+
+Expected outputs.
+
+---
+
+### Acceptance Criteria
+
+Conditions required for completion.
+
+---
+
+### Handoff
+
+Identify the next AI role.
+
+---
+
+## 16.4 Architecture Prompt Template
+
+Purpose
+
+Design architecture for an approved feature.
+
+Template
+
+```
+Role
+
+Chief Architect
+
+Objective
+
+Design architecture for:
+
+<Feature>
+
+Read
+
+DOC-000
+
+DOC-001
+
+PROJECT.md
+
+Architecture Documents
+
+Tasks
+
+Analyze requirements.
+
+Design modules.
+
+Identify dependencies.
+
+Define interfaces.
+
+Design data flow.
+
+Identify risks.
+
+Deliverables
+
+Architecture Proposal
+
+Module Diagram
+
+Implementation Plan
+
+Acceptance Criteria
+
+Architecture complete.
+
+Modules defined.
+
+Interfaces documented.
+
+Dependencies identified.
+
+```
+
+---
+
+## 16.5 Product Manager Prompt Template
+
+Purpose
+
+Create product requirements.
+
+Template
+
+```
+Role
+
+Product Manager
+
+Objective
+
+Create requirements for:
+
+<Feature>
+
+Tasks
+
+Define user problem.
+
+Define objectives.
+
+Write user stories.
+
+Create acceptance criteria.
+
+Deliverables
+
+Requirements
+
+User Stories
+
+Acceptance Criteria
+
+```
+
+---
+
+## 16.6 Prompt Engineer Template
+
+Purpose
+
+Generate implementation prompts.
+
+Template
+
+```
+Role
+
+Prompt Engineer
+
+Objective
+
+Generate implementation prompt.
+
+Read
+
+Architecture
+
+Requirements
+
+Development Standards
+
+Tasks
+
+Convert architecture into implementation instructions.
+
+Deliverables
+
+Implementation Prompt
+
+Testing Requirements
+
+Acceptance Criteria
+
+```
+
+---
+
+## 16.7 Implementation Engineer Template
+
+Purpose
+
+Generate production-quality implementation.
+
+Template
+
+```
+Role
+
+Implementation Engineer
+
+Objective
+
+Implement approved feature.
+
+Read
+
+Implementation Prompt
+
+Architecture
+
+Development Standards
+
+Tasks
+
+Write production code.
+
+Add logging.
+
+Handle errors.
+
+Write tests.
+
+Deliverables
+
+Code
+
+Tests
+
+Documentation Updates
+
+```
+
+---
+
+## 16.8 Code Review Prompt Template
+
+Purpose
+
+Review implementation quality.
+
+Template
+
+```
+Role
+
+Code Reviewer
+
+Review
+
+Architecture
+
+Maintainability
+
+SOLID
+
+Performance
+
+Security
+
+Documentation
+
+Testing
+
+Deliverable
+
+Review Report
+
+```
+
+---
+
+## 16.9 QA Prompt Template
+
+Purpose
+
+Validate completed implementation.
+
+Template
+
+```
+Role
+
+QA Engineer
+
+Tasks
+
+Verify requirements.
+
+Execute tests.
+
+Validate edge cases.
+
+Produce QA Report.
+
+Deliverables
+
+Test Report
+
+Approval
+
+Defect List
+
+```
+
+---
+
+## 16.10 Documentation Prompt Template
+
+Purpose
+
+Update documentation.
+
+Template
+
+```
+Role
+
+Documentation Engineer
+
+Tasks
+
+Update documentation.
+
+Update changelog.
+
+Update PROJECT.md.
+
+Verify cross references.
+
+Deliverables
+
+Updated Documents
+
+Revision History
+
+```
+
+---
+
+## 16.11 Research Prompt Template
+
+Purpose
+
+Evaluate technology.
+
+Template
+
+```
+Role
+
+Research Engineer
+
+Tasks
+
+Research alternatives.
+
+Compare solutions.
+
+Evaluate risks.
+
+Recommend option.
+
+Deliverables
+
+Research Report
+
+Technology Comparison
+
+Recommendation
+
+```
+
+---
+
+## 16.12 Database Prompt Template
+
+Purpose
+
+Design database changes.
+
+Template
+
+```
+Role
+
+Database Architect
+
+Tasks
+
+Design schema.
+
+Review relationships.
+
+Optimize indexes.
+
+Document migrations.
+
+Deliverables
+
+ER Diagram
+
+Schema
+
+Migration Plan
+
+```
+
+---
+
+## 16.13 UI/UX Prompt Template
+
+Purpose
+
+Design user experience.
+
+Template
+
+```
+Role
+
+UI Designer
+
+Tasks
+
+Create layout.
+
+Design workflow.
+
+Produce wireframes.
+
+Review accessibility.
+
+Deliverables
+
+Wireframes
+
+Mockups
+
+Specifications
+
+```
+
+---
+
+## 16.14 DevOps Prompt Template
+
+Purpose
+
+Automate engineering workflow.
+
+Template
+
+```
+Role
+
+DevOps Engineer
+
+Tasks
+
+Configure CI.
+
+Create automation.
+
+Validate pipeline.
+
+Improve build process.
+
+Deliverables
+
+GitHub Actions
+
+Automation Scripts
+
+Build Documentation
+
+```
+
+---
+
+## 16.15 Debugging Prompt Template
+
+Purpose
+
+Resolve implementation issues.
+
+Template
+
+```
+Role
+
+Debug Engineer
+
+Inputs
+
+Error
+
+Logs
+
+Code
+
+Tasks
+
+Identify root cause.
+
+Explain issue.
+
+Recommend fix.
+
+Verify solution.
+
+Deliverables
+
+Root Cause Analysis
+
+Corrective Action
+
+Verification
+
+```
+
+---
+
+## 16.16 Feature Planning Prompt Template
+
+Purpose
+
+Prepare new feature.
+
+Template
+
+```
+Role
+
+Chief Architect
+
+Tasks
+
+Analyze feature.
+
+Estimate complexity.
+
+Identify modules.
+
+Prepare implementation roadmap.
+
+Deliverables
+
+Architecture
+
+Roadmap
+
+Implementation Plan
+
+```
+
+---
+
+## 16.17 Release Prompt Template
+
+Purpose
+
+Prepare software release.
+
+Template
+
+```
+Role
+
+Release Manager
+
+Tasks
+
+Verify documentation.
+
+Verify testing.
+
+Update changelog.
+
+Prepare release notes.
+
+Create release checklist.
+
+Deliverables
+
+Release Notes
+
+Version Update
+
+Release Checklist
+
+```
+
+---
+
+## 16.18 Session Startup Checklist
+
+Every AI session should begin by verifying:
+
+☐ Read DOC-000
+
+☐ Read DOC-001
+
+☐ Read PROJECT.md
+
+☐ Understand assigned role
+
+☐ Confirm task scope
+
+☐ Review related documentation
+
+☐ Identify deliverables
+
+---
+
+## 16.19 Session Completion Checklist
+
+Before ending a session verify:
+
+☐ Work completed
+
+☐ Documentation updated
+
+☐ Known issues recorded
+
+☐ Handoff prepared
+
+☐ Next task identified
+
+☐ Repository ready for commit
+
+---
+
+## 16.20 Prompt Library Management
+
+Reusable prompts should be stored within:
+
+```
+prompts/
+
+architecture/
+
+implementation/
+
+review/
+
+qa/
+
+research/
+
+database/
+
+ui/
+
+devops/
+
+documentation/
+
+release/
+```
+
+Each prompt should include:
+
+- Version
+- Owner
+- Purpose
+- Last Updated
+- Related Documents
+
+---
+
+## 16.21 Chapter Summary
+
+Prompt Templates provide a standardized method for assigning engineering tasks to specialized AI roles.
+
+Consistent prompt structure improves implementation quality, reduces ambiguity, and enables efficient collaboration across the Harmony AI engineering organization.
+
+---
+
+# End of Part 7
+
+Next:
+
+# Part 8 (Final)
+
+Chapter 17 — Handbook Summary
+
+Appendix A — AI Workflow Diagram
+
+Appendix B — Deliverable Matrix
+
+Appendix C — Responsibility Matrix (RACI)
+
+Appendix D — AI Thread Quick Start
+
+Appendix E — Glossary
+
+Appendix F — Document Approval
+
+End of DOC-002
