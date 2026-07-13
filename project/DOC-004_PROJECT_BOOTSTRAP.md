@@ -743,14 +743,421 @@ Next:
 
 # Part III — Engineering Workflow
 
-Chapters:
+# Part III — Engineering Workflow
 
-11. Creating New Features
+# Chapter 11 — Creating New Features
 
-12. AI Development Workflow
+## 11.1 Purpose
 
-13. Documentation Workflow
+Harmony AI follows a structured engineering workflow for every new feature.
 
-14. Commit Workflow
+Features should be designed, documented, reviewed, implemented, tested, and documented before being considered complete.
 
-15. Pull Request Workflow
+Following a consistent workflow improves software quality, reduces technical debt, and simplifies future maintenance.
+
+---
+
+## 11.2 Feature Development Lifecycle
+
+Every feature should progress through the following stages:
+
+```
+Idea
+
+↓
+
+Requirements
+
+↓
+
+Architecture
+
+↓
+
+Database Design (if required)
+
+↓
+
+API Design (if required)
+
+↓
+
+UI Design (if required)
+
+↓
+
+Implementation Prompt
+
+↓
+
+Implementation
+
+↓
+
+Code Review
+
+↓
+
+Quality Assurance
+
+↓
+
+Documentation
+
+↓
+
+Git Commit
+
+↓
+
+Project Dashboard Update
+```
+
+No implementation should bypass these stages without approval.
+
+---
+
+## 11.3 Feature Documentation
+
+Before implementation begins, the following documents should exist where applicable:
+
+- Product Requirements Document (PRD)
+- Architecture Specification
+- Database Design
+- API Specification
+- UI Specification
+- Acceptance Criteria
+
+Documentation becomes the reference for implementation.
+
+---
+
+## 11.4 Feature Completion
+
+A feature is considered complete only when:
+
+- Requirements are satisfied.
+- Tests pass.
+- Documentation is updated.
+- Code review is approved.
+- QA is completed.
+- PROJECT.md reflects the new status.
+
+---
+
+## 11.5 Chapter Summary
+
+Following a structured feature lifecycle ensures consistent engineering quality throughout the Harmony AI project.
+
+---
+
+# Chapter 12 — AI Development Workflow
+
+## 12.1 Purpose
+
+Harmony AI uses multiple AI roles working independently but collaboratively.
+
+Each AI performs a specialized engineering function.
+
+---
+
+## 12.2 Standard AI Workflow
+
+```
+Chief Architect
+
+↓
+
+Prompt Engineer
+
+↓
+
+Implementation Engineer
+
+↓
+
+Code Reviewer
+
+↓
+
+QA Engineer
+
+↓
+
+Documentation Engineer
+
+↓
+
+Project Owner
+```
+
+Each role produces documented outputs for the next role.
+
+---
+
+## 12.3 AI Session Startup
+
+Before beginning work, every AI session should:
+
+1. Read DOC-000.
+2. Read DOC-001.
+3. Read DOC-002.
+4. Read DOC-003.
+5. Read PROJECT.md.
+6. Review assigned task.
+7. Confirm deliverables.
+
+---
+
+## 12.4 AI Deliverables
+
+Each AI session should produce:
+
+- Completed assigned task.
+- Updated documentation (if required).
+- Summary of work completed.
+- Known issues.
+- Recommended next step.
+
+---
+
+## 12.5 AI Session Completion
+
+Before ending a session:
+
+☐ Deliverables complete
+
+☐ Documentation updated
+
+☐ Known issues recorded
+
+☐ Handoff prepared
+
+☐ Next task identified
+
+---
+
+## 12.6 Chapter Summary
+
+A structured AI workflow ensures continuity and consistency across independent AI conversations.
+
+---
+
+# Chapter 13 — Documentation Workflow
+
+## 13.1 Purpose
+
+Documentation evolves alongside implementation.
+
+Every engineering change should be reflected in the project's documentation.
+
+---
+
+## 13.2 Documentation Process
+
+Standard workflow:
+
+```
+Requirement
+
+↓
+
+Implementation
+
+↓
+
+Review
+
+↓
+
+Documentation Update
+
+↓
+
+Commit
+```
+
+---
+
+## 13.3 Required Documentation Updates
+
+Depending on the change, update:
+
+- PROJECT.md
+- Changelog
+- User Guide
+- Developer Guide
+- Architecture Documents
+- API Documentation
+- Database Documentation
+
+---
+
+## 13.4 Documentation Quality
+
+Documentation should be:
+
+- Accurate
+- Complete
+- Up to date
+- Easy to understand
+- Consistent
+
+---
+
+## 13.5 Chapter Summary
+
+Keeping documentation synchronized with implementation preserves project knowledge and simplifies future development.
+
+---
+
+# Chapter 14 — Commit Workflow
+
+## 14.1 Purpose
+
+Git commits provide a permanent history of project changes.
+
+Commits should be meaningful, focused, and traceable.
+
+---
+
+## 14.2 Commit Principles
+
+Each commit should:
+
+- Represent one logical change.
+- Include a clear message.
+- Be reviewable.
+- Build successfully.
+
+Avoid mixing unrelated work in a single commit.
+
+---
+
+## 14.3 Commit Message Format
+
+Harmony AI uses the following format:
+
+```
+type: short description
+```
+
+Examples:
+
+```
+feat: add library scanner
+
+fix: resolve metadata parsing issue
+
+docs: update project roadmap
+
+refactor: simplify repository implementation
+
+test: add metadata parser tests
+
+chore: update dependencies
+```
+
+---
+
+## 14.4 Before Commit
+
+Verify:
+
+☐ Code formatted
+
+☐ Tests passed
+
+☐ Documentation updated
+
+☐ No debug code
+
+☐ No temporary files
+
+---
+
+## 14.5 Chapter Summary
+
+Consistent commits improve traceability and simplify collaboration.
+
+---
+
+# Chapter 15 — Pull Request Workflow
+
+## 15.1 Purpose
+
+Pull Requests provide a structured review process before changes are merged.
+
+They improve quality through discussion and review.
+
+---
+
+## 15.2 Pull Request Process
+
+Standard workflow:
+
+```
+Feature Branch
+
+↓
+
+Self Review
+
+↓
+
+Code Review
+
+↓
+
+QA
+
+↓
+
+Approval
+
+↓
+
+Merge
+```
+
+---
+
+## 15.3 Pull Request Checklist
+
+Before opening a Pull Request:
+
+☐ Feature complete
+
+☐ Tests passing
+
+☐ Documentation updated
+
+☐ PROJECT.md updated
+
+☐ Commit history reviewed
+
+☐ No merge conflicts
+
+---
+
+## 15.4 Merge Requirements
+
+Changes should only be merged after:
+
+- Code Review approval
+- QA approval
+- Documentation completion
+
+---
+
+## 15.5 Chapter Summary
+
+A structured Pull Request process protects the quality and stability of Harmony AI.
+
+---
+
+# End of Part 3
+
+Next:
+
+# Part IV — Maintenance
