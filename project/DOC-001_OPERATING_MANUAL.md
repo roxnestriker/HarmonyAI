@@ -2012,3 +2012,293 @@ Maintaining accurate documentation is a shared responsibility of every contribut
 ---
 
 **End of Chapter 7**
+---
+
+# Chapter 8 — Git & Version Control
+
+## 8.1 Purpose
+
+Version control is fundamental to the development of Harmony AI.
+
+Git provides a complete history of the project, enables safe collaboration, preserves engineering decisions, and ensures every change is traceable.
+
+All project artifacts, including source code, documentation, prompts, automation scripts, and configuration files, shall be managed through Git.
+
+---
+
+## 8.2 Source of Truth
+
+The Git repository is the single authoritative source for the Harmony AI project.
+
+The repository shall contain:
+
+- Source code
+- Documentation
+- Prompt library
+- Automation scripts
+- Configuration
+- Architecture documents
+- Templates
+- Development standards
+
+Chat conversations are temporary working sessions and shall never be considered permanent project records.
+
+---
+
+## 8.3 Repository Philosophy
+
+The repository represents the entire engineering organization.
+
+Every important project artifact should exist inside the repository whenever practical.
+
+The repository should remain:
+
+- Organized
+- Well documented
+- Easy to navigate
+- Consistent
+- Professional
+
+---
+
+## 8.4 Repository Structure
+
+The repository shall follow a consistent structure.
+
+Major directories include:
+
+- apps
+- packages
+- docs
+- project
+- prompts
+- automation
+- assets
+- tests
+- scripts
+- tools
+- examples
+
+Each directory has a clearly defined purpose.
+
+The structure should evolve only through approved architectural decisions.
+
+---
+
+## 8.5 Local Development Workflow
+
+Development is performed using a local Git repository.
+
+Typical workflow:
+
+1. Pull the latest changes.
+2. Review PROJECT.md.
+3. Complete the planned task.
+4. Review changes.
+5. Commit locally.
+6. Push to GitHub.
+
+The local repository is the primary development environment.
+
+GitHub serves as the central project repository.
+
+---
+
+## 8.6 Branching Strategy
+
+During early development, Harmony AI uses a simplified branching strategy.
+
+Primary branches:
+
+- main
+- develop (future)
+
+Feature branches may be introduced as the contributor base grows.
+
+Initially, development may occur directly on the main branch due to the single-maintainer workflow.
+
+As the project expands, feature branches and pull requests shall become mandatory.
+
+---
+
+## 8.7 Commit Philosophy
+
+Every commit should represent one meaningful logical change.
+
+Commits should be:
+
+- Small
+- Focused
+- Reversible
+- Well described
+
+Avoid combining unrelated changes into a single commit.
+
+---
+
+## 8.8 Commit Message Standard
+
+Harmony AI follows the Conventional Commits specification.
+
+Examples:
+
+```
+docs: update operating manual
+
+feat: add music library scanner
+
+fix: resolve metadata parsing issue
+
+refactor: simplify repository initialization
+
+test: add unit tests for scanner
+
+build: update automation scripts
+
+ci: configure GitHub Actions
+
+chore: reorganize repository
+```
+
+Commit messages should describe *what* changed, not *how* it changed.
+
+---
+
+## 8.9 Pull Requests
+
+As additional contributors join the project, changes should be submitted through Pull Requests.
+
+A Pull Request should include:
+
+- Summary
+- Purpose
+- Related issue
+- Testing performed
+- Documentation updated
+- Review status
+
+Major architectural changes require approval before merging.
+
+---
+
+## 8.10 Code Review
+
+Every significant change should undergo review before integration.
+
+Reviews evaluate:
+
+- Correctness
+- Maintainability
+- Readability
+- Performance
+- Security
+- Documentation
+- Testing
+
+Review feedback should be constructive and documented.
+
+---
+
+## 8.11 Documentation Commits
+
+Documentation should be committed frequently.
+
+Large documentation changes should be divided into logical commits.
+
+Examples:
+
+- One chapter
+- One feature specification
+- One ADR
+- One template
+
+This keeps project history clear and understandable.
+
+---
+
+## 8.12 Repository Maintenance
+
+The repository should remain clean.
+
+Avoid committing:
+
+- Temporary files
+- Build artifacts
+- Cache files
+- Virtual environments
+- Personal configuration
+- Large binary files unless required
+
+The `.gitignore` file should be maintained accordingly.
+
+---
+
+## 8.13 Versioning
+
+Harmony AI follows Semantic Versioning.
+
+Format:
+
+MAJOR.MINOR.PATCH
+
+Examples:
+
+- v0.1.0
+- v0.2.0
+- v0.3.1
+- v1.0.0
+
+Version numbers should reflect meaningful project milestones.
+
+---
+
+## 8.14 Release Tags
+
+Every official release should be tagged in Git.
+
+Release tags provide stable reference points for users and contributors.
+
+Each release should include:
+
+- Release notes
+- Changelog
+- Documentation updates
+
+---
+
+## 8.15 Backup Strategy
+
+GitHub provides primary version history.
+
+Local repositories provide working copies.
+
+Additional backups may be maintained separately for disaster recovery.
+
+The Git repository itself remains the official project archive.
+
+---
+
+## 8.16 Continuous Repository Improvement
+
+Repository organization should improve as the project grows.
+
+Changes to repository structure should:
+
+- Preserve clarity.
+- Minimize disruption.
+- Maintain documentation consistency.
+- Be approved when affecting project architecture.
+
+---
+
+## 8.17 Chapter Summary
+
+Version control enables Harmony AI to grow safely, transparently, and professionally.
+
+Every change should be traceable, documented, and reversible.
+
+A well-maintained Git history is one of the project's most valuable engineering assets.
+
+---
+
+**End of Chapter 8**
