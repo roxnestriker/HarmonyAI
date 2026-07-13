@@ -161,3 +161,394 @@ The Music Library is considered successful when:
 - Statistics are accurate.
 - The library remains synchronized with the filesystem.
 
+# Part II — Functional Requirements
+
+# Chapter 5 — Music Library
+
+## 5.1 Purpose
+
+The Music Library is the central repository of all music managed by Harmony AI.
+
+It maintains an indexed representation of the user's music collection while preserving the original files on disk.
+
+Harmony AI never modifies or degrades the original audio files.
+
+---
+
+## 5.2 Supported Audio Formats
+
+The initial release shall support:
+
+- FLAC
+- MP3
+- M4A
+- AAC
+- OGG
+- OPUS
+- WAV
+- AIFF
+- APE
+- WMA (Read Only)
+
+Future releases may add:
+
+- DSD
+- SACD ISO
+- Other high-resolution formats
+
+---
+
+## 5.3 Library Locations
+
+Users may register one or more library locations.
+
+Examples:
+
+```
+D:\Music
+
+E:\Hi-Res Music
+
+NAS\Music
+
+OneDrive\Music
+```
+
+Each library location shall be scanned independently.
+
+---
+
+## 5.4 Library Monitoring
+
+The system shall detect:
+
+- Newly added songs
+- Deleted songs
+- Renamed songs
+- Moved songs
+- Modified metadata
+- Artwork changes
+
+Library synchronization should maintain consistency between the file system and the Harmony AI database.
+
+---
+
+## 5.5 Library Integrity
+
+Harmony AI shall never:
+
+- Modify audio quality
+- Transcode files
+- Delete user files
+- Rename files automatically
+
+Such operations require explicit user approval.
+
+---
+
+# Chapter 6 — Folder Scanner
+
+## 6.1 Purpose
+
+The Folder Scanner discovers audio files and maintains synchronization between the physical music collection and the Harmony AI database.
+
+---
+
+## 6.2 Functional Requirements
+
+The Folder Scanner shall:
+
+- Scan one or more folders.
+- Scan recursively.
+- Ignore unsupported files.
+- Ignore hidden system folders when configured.
+- Detect symbolic links when configured.
+- Detect duplicate paths.
+- Support incremental scanning.
+
+---
+
+## 6.3 Scan Modes
+
+The scanner shall support:
+
+### Full Scan
+
+Indexes the complete library.
+
+---
+
+### Incremental Scan
+
+Processes only changed files.
+
+---
+
+### Folder Scan
+
+Scans one selected folder.
+
+---
+
+### File Scan
+
+Processes one selected file.
+
+---
+
+### Background Scan
+
+Runs automatically while Harmony AI is idle.
+
+---
+
+## 6.4 Scan Progress
+
+During scanning the user should see:
+
+- Current folder
+- Current file
+- Files processed
+- Files remaining
+- Estimated time
+- Current speed
+- Errors encountered
+
+---
+
+## 6.5 Scan Results
+
+The scanner shall produce:
+
+- New Songs
+- Updated Songs
+- Deleted Songs
+- Failed Files
+- Unsupported Files
+- Duplicate Candidates
+
+---
+
+# Chapter 7 — Metadata Management
+
+## 7.1 Purpose
+
+Metadata Management extracts, validates, stores, and updates metadata from supported audio formats.
+
+Harmony AI treats metadata as one of its most valuable information sources.
+
+---
+
+## 7.2 Required Metadata
+
+Every song should store when available:
+
+- Title
+- Artist
+- Album Artist
+- Album
+- Genre
+- Track Number
+- Disc Number
+- Year
+- Composer
+- Conductor
+- BPM
+- Rating
+- Lyrics
+- ReplayGain
+- ISRC
+- MusicBrainz IDs
+
+---
+
+## 7.3 Technical Metadata
+
+The system shall also store:
+
+- Duration
+- Bitrate
+- Sample Rate
+- Bit Depth
+- Channels
+- Codec
+- File Size
+- File Extension
+- Last Modified Date
+- File Hash
+
+---
+
+## 7.4 Metadata Validation
+
+Harmony AI should identify:
+
+- Missing title
+- Missing artist
+- Missing album
+- Invalid track numbers
+- Empty genres
+- Corrupted tags
+- Duplicate identifiers
+
+---
+
+## 7.5 Metadata Editing
+
+Future versions shall support:
+
+- Batch editing
+- Automatic metadata correction
+- Metadata synchronization
+- Undo history
+
+The initial version focuses on reading and storing metadata.
+
+---
+
+# Chapter 8 — Album Artwork
+
+## 8.1 Purpose
+
+Harmony AI shall manage album artwork independently of playback software.
+
+---
+
+## 8.2 Artwork Sources
+
+Artwork may be obtained from:
+
+- Embedded artwork
+- Folder artwork
+- Cached artwork
+- Online metadata providers (future)
+
+---
+
+## 8.3 Supported Artwork Types
+
+The system should support:
+
+- Front Cover
+- Back Cover
+- Artist Image
+- Disc Artwork
+- Booklet Pages (future)
+
+---
+
+## 8.4 Artwork Quality
+
+When multiple images exist:
+
+Harmony AI should prefer:
+
+1. Embedded high-resolution artwork
+
+2. Folder artwork
+
+3. Cached artwork
+
+Future versions may download higher-quality artwork.
+
+---
+
+# Chapter 9 — Duplicate Detection
+
+## 9.1 Purpose
+
+Duplicate Detection identifies multiple copies of the same recording.
+
+The objective is to improve library organization while preserving user control.
+
+---
+
+## 9.2 Duplicate Types
+
+Harmony AI shall identify:
+
+- Exact duplicates
+- Same file in different folders
+- Same audio with different metadata
+- Different formats of the same song
+- Similar filenames
+- Matching audio fingerprints (future)
+
+---
+
+## 9.3 Detection Criteria
+
+Possible comparison attributes include:
+
+- File Hash
+- Duration
+- Metadata
+- File Size
+- Bitrate
+- MusicBrainz ID
+- Audio Fingerprint (future)
+
+---
+
+## 9.4 User Control
+
+Harmony AI shall never automatically delete duplicate files.
+
+Users decide how duplicates are managed.
+
+---
+
+# Chapter 10 — Library Statistics
+
+## 10.1 Purpose
+
+Statistics provide insight into the user's music collection.
+
+---
+
+## 10.2 Required Statistics
+
+Harmony AI should calculate:
+
+- Total Songs
+- Total Albums
+- Total Artists
+- Total Genres
+- Total Duration
+- Total Storage Size
+- Audio Format Distribution
+- Bitrate Distribution
+- Sample Rate Distribution
+- Recently Added Songs
+
+---
+
+## 10.3 Future Statistics
+
+Future releases may include:
+
+- Listening Trends
+- Favorite Artists
+- Favorite Genres
+- Most Played Songs
+- Least Played Songs
+- Forgotten Music
+- Collection Growth
+- Library Health Score
+
+---
+
+## 10.4 Chapter Summary
+
+The Music Library module provides the foundation upon which every other Harmony AI feature is built.
+
+Its responsibilities include discovering audio files, maintaining accurate metadata, managing artwork, identifying duplicates, and generating meaningful statistics while preserving the integrity of the user's original music collection.
+
+---
+
+# End of Part 2
+
+Next:
+
+# Part III — Non-Functional Requirements
+
