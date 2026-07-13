@@ -742,3 +742,365 @@ The engineering philosophy defined in this chapter serves as the foundation for 
 ---
 
 **End of Chapter 3**
+---
+
+# Chapter 4 — Project Governance
+
+## 4.1 Purpose
+
+Project governance defines how Harmony AI is managed, how technical decisions are made, and how contributors collaborate throughout the software development lifecycle.
+
+Its primary objective is to ensure consistency, maintain architectural integrity, and provide a clear decision-making framework.
+
+Harmony AI shall be governed as a professional software engineering project rather than an ad hoc collection of code and documents.
+
+---
+
+## 4.2 Governance Structure
+
+Harmony AI follows a layered governance model.
+
+### Project Owner
+
+The Project Owner is responsible for:
+
+- Product vision
+- Feature prioritization
+- Final approval of project direction
+- Release planning
+- Strategic decisions
+
+The Project Owner has the final authority on business and product decisions.
+
+---
+
+### Chief Architect
+
+The Chief Architect is responsible for:
+
+- Software architecture
+- Engineering decisions
+- Documentation governance
+- Technical standards
+- System modularity
+- Long-term maintainability
+
+No architectural change shall be implemented without review by the Chief Architect.
+
+---
+
+### Engineering Team
+
+The Engineering Team is responsible for:
+
+- Feature implementation
+- Refactoring
+- Testing
+- Documentation updates
+- Bug fixing
+
+Engineering work must follow the approved architecture.
+
+---
+
+### AI Specialists
+
+Specialized AI threads act as members of the engineering team.
+
+Each AI role has defined responsibilities documented in **DOC-002 – AI Team Handbook**.
+
+AI assistants provide recommendations but do not independently change project governance or architecture.
+
+---
+
+## 4.3 Decision Hierarchy
+
+In the event of conflicting opinions, decisions shall follow this order of authority:
+
+1. Project Vision (DOC-000)
+2. Operating Manual (DOC-001)
+3. Architecture Decision Records (ADR)
+4. Development Standards (DOC-003)
+5. Feature Specifications
+6. Implementation Details
+
+Lower-level documents must never contradict higher-level documents.
+
+---
+
+## 4.4 Types of Decisions
+
+Harmony AI recognizes four categories of decisions.
+
+### Strategic Decisions
+
+Examples:
+
+- Product direction
+- Supported platforms
+- Licensing
+- Long-term roadmap
+
+Approval Required:
+
+Project Owner
+
+---
+
+### Architectural Decisions
+
+Examples:
+
+- Clean Architecture
+- Database technology
+- Plugin framework
+- AI integration
+- Event system
+
+Approval Required:
+
+Chief Architect
+
+All approved architectural decisions must be documented as Architecture Decision Records (ADR).
+
+---
+
+### Engineering Decisions
+
+Examples:
+
+- Refactoring
+- Code organization
+- Testing improvements
+- Logging implementation
+
+Approval Required:
+
+Engineering Team Lead or Chief Architect
+
+---
+
+### Operational Decisions
+
+Examples:
+
+- Documentation updates
+- Minor tooling improvements
+- Issue labeling
+- Workflow adjustments
+
+Approval may be delegated.
+
+---
+
+## 4.5 Architecture Decision Records (ADR)
+
+Every significant architectural decision must be documented.
+
+Each ADR should include:
+
+- Context
+- Problem Statement
+- Alternatives Considered
+- Decision
+- Consequences
+- Status
+- Related Documents
+
+ADRs provide historical context and reduce repeated discussions.
+
+---
+
+## 4.6 Request for Comments (RFC)
+
+Large features should begin as a Request for Comments (RFC).
+
+Typical workflow:
+
+Idea
+
+↓
+
+Research
+
+↓
+
+RFC
+
+↓
+
+Discussion
+
+↓
+
+Approval
+
+↓
+
+Architecture
+
+↓
+
+Implementation
+
+RFCs encourage thoughtful design before implementation begins.
+
+---
+
+## 4.7 Change Management
+
+Every significant project change should follow a controlled process.
+
+Change lifecycle:
+
+Proposal
+
+↓
+
+Review
+
+↓
+
+Approval
+
+↓
+
+Implementation
+
+↓
+
+Testing
+
+↓
+
+Documentation
+
+↓
+
+Release
+
+Changes should never bypass documentation.
+
+---
+
+## 4.8 Feature Approval Process
+
+Before implementation begins, every feature should have:
+
+- Clear objective
+- Functional requirements
+- Technical discussion
+- Architecture review
+- Estimated impact
+- Acceptance criteria
+
+Implementation begins only after approval.
+
+---
+
+## 4.9 Issue Management
+
+Project issues are categorized as:
+
+- Bug
+- Feature
+- Enhancement
+- Documentation
+- Performance
+- Refactoring
+- Research
+- Technical Debt
+
+Every issue should have:
+
+- Priority
+- Status
+- Owner
+- Expected outcome
+
+---
+
+## 4.10 Technical Debt Management
+
+Technical debt is unavoidable but must remain visible.
+
+Whenever shortcuts are introduced:
+
+- Record the reason.
+- Estimate impact.
+- Define a resolution strategy.
+- Assign priority.
+
+Technical debt should never be hidden.
+
+---
+
+## 4.11 Communication Principles
+
+All communication should prioritize:
+
+- Clarity
+- Transparency
+- Constructive feedback
+- Respectful discussion
+- Evidence-based reasoning
+
+Engineering decisions should rely on objective technical reasoning rather than personal preference.
+
+---
+
+## 4.12 AI Collaboration Governance
+
+Harmony AI uses multiple specialized AI threads.
+
+Each thread operates independently within its assigned responsibilities.
+
+AI threads communicate indirectly through:
+
+- Repository documentation
+- Project Dashboard
+- Architecture documents
+- Approved standards
+
+No AI thread should assume undocumented project knowledge.
+
+---
+
+## 4.13 Documentation Governance
+
+Documentation changes are governed in the same manner as code changes.
+
+Major documentation updates require review before approval.
+
+Documentation shall remain synchronized with implementation.
+
+Outdated documentation is considered a project defect.
+
+---
+
+## 4.14 Governance Principles
+
+The Harmony AI project follows these governance principles:
+
+- Documentation First
+- Architecture Before Implementation
+- Quality Over Speed
+- Transparency
+- Long-Term Thinking
+- Continuous Improvement
+- Open Collaboration
+- Professional Engineering Practices
+
+---
+
+## 4.15 Chapter Summary
+
+Project governance ensures Harmony AI remains organized, maintainable, and scalable throughout its lifetime.
+
+By establishing clear authority, structured decision-making, and documented approval processes, the project minimizes confusion and preserves architectural consistency.
+
+Every contributor, whether human or AI, is expected to follow the governance framework described in this chapter.
+
+---
+
+**End of Chapter 4**
