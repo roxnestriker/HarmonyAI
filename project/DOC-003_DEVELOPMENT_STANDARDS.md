@@ -400,3 +400,444 @@ The standards defined in this section ensure that every contributor approaches d
 **End of Part 1**
 
 **Next:** Part 2 — Python Standards
+# Part II — Python Standards
+
+# Chapter 6 — Python Style Guide
+
+## 6.1 Purpose
+
+This chapter defines the Python coding standards for Harmony AI.
+
+The objective is to produce code that is readable, maintainable, testable, and consistent across the entire project.
+
+All Python code shall follow these standards unless an approved exception exists.
+
+---
+
+## 6.2 Python Version
+
+Harmony AI standardizes on:
+
+Python 3.12+
+
+All new code should target the project's supported Python version.
+
+Deprecated language features should not be used.
+
+---
+
+## 6.3 Style Guide
+
+Harmony AI follows:
+
+- PEP 8
+- PEP 257
+- PEP 484
+- PEP 526
+- PEP 544 (where appropriate)
+
+Automatic formatting is performed using:
+
+- Black
+
+Static analysis is performed using:
+
+- Ruff
+
+Formatting should never be done manually if automated tools are available.
+
+---
+
+## 6.4 Line Length
+
+Maximum line length:
+
+88 characters
+
+Exceptions should be rare and justified.
+
+---
+
+## 6.5 Indentation
+
+Use:
+
+Four spaces
+
+Never use tabs.
+
+---
+
+## 6.6 Blank Lines
+
+Use blank lines to improve readability.
+
+Examples:
+
+- Between classes
+- Between major functions
+- Between logical sections
+
+Avoid excessive vertical spacing.
+
+---
+
+## 6.7 Comments
+
+Comments should explain:
+
+Why something exists.
+
+Avoid comments that merely repeat the code.
+
+Good:
+
+```
+# Cache album artwork to reduce repeated disk access.
+```
+
+Poor:
+
+```
+# Increment counter.
+counter += 1
+```
+
+---
+
+## 6.8 TODO Comments
+
+Temporary work should use:
+
+```
+TODO:
+```
+
+Example
+
+```
+TODO: Support DSD metadata parsing.
+```
+
+Every TODO should be traceable to a project task.
+
+---
+
+# Chapter 7 — Type Hints
+
+## 7.1 Philosophy
+
+Harmony AI uses static typing wherever practical.
+
+Type hints improve:
+
+- Readability
+- IDE support
+- Static analysis
+- Refactoring
+- Documentation
+
+---
+
+## 7.2 Required Usage
+
+Type hints are required for:
+
+- Function parameters
+- Return values
+- Public methods
+- Class attributes
+
+---
+
+## 7.3 Collections
+
+Use built-in generic types.
+
+Examples:
+
+```
+list[str]
+
+dict[str, int]
+
+set[str]
+```
+
+Avoid legacy typing syntax unless required.
+
+---
+
+## 7.4 Optional Values
+
+Use:
+
+```
+str | None
+```
+
+rather than older Optional syntax whenever supported.
+
+---
+
+## 7.5 Any
+
+Avoid:
+
+```
+Any
+```
+
+unless absolutely necessary.
+
+Unknown types should be modeled explicitly whenever practical.
+
+---
+
+## 7.6 Type Aliases
+
+Complex types should be simplified using aliases.
+
+Example:
+
+```
+SongId = int
+
+ArtistName = str
+```
+
+---
+
+## 7.7 Type Checking
+
+Static type checking should be part of development.
+
+Type errors should be resolved before merging changes.
+
+---
+
+# Chapter 8 — Documentation Standards
+
+## 8.1 Philosophy
+
+Code should be understandable through:
+
+- Good names
+- Clear structure
+- Helpful documentation
+
+Documentation complements readable code.
+
+---
+
+## 8.2 Docstrings
+
+Public modules should include module docstrings.
+
+Public classes should include class docstrings.
+
+Public functions should include function docstrings.
+
+---
+
+## 8.3 Docstring Style
+
+Harmony AI adopts:
+
+Google Style Docstrings
+
+Example:
+
+```
+def scan_library(path: Path) -> ScanResult:
+    """
+    Scan a music library.
+
+    Args:
+        path:
+            Root music folder.
+
+    Returns:
+        ScanResult containing discovered files.
+    """
+```
+
+---
+
+## 8.4 Inline Documentation
+
+Explain:
+
+- Algorithms
+- Design decisions
+- Non-obvious behavior
+
+Avoid documenting obvious implementation.
+
+---
+
+## 8.5 Examples
+
+Public APIs should include examples whenever practical.
+
+Examples improve usability.
+
+---
+
+# Chapter 9 — Module Organization
+
+## 9.1 Purpose
+
+Every module should have one clear responsibility.
+
+Large modules should be divided into smaller components.
+
+---
+
+## 9.2 File Size
+
+Target:
+
+Less than 500 lines.
+
+Review modules exceeding 700 lines.
+
+Avoid "God Modules."
+
+---
+
+## 9.3 Class Size
+
+Classes should represent one concept.
+
+Very large classes should be decomposed.
+
+---
+
+## 9.4 Function Size
+
+Functions should be:
+
+- Small
+- Focused
+- Easy to test
+
+Target:
+
+Less than 40 lines.
+
+Exceptions should be uncommon.
+
+---
+
+## 9.5 Public API
+
+Expose only what consumers require.
+
+Internal implementation should remain private.
+
+---
+
+## 9.6 Circular Dependencies
+
+Circular imports should be avoided.
+
+Shared functionality belongs in dedicated modules.
+
+---
+
+# Chapter 10 — Import Rules
+
+## 10.1 Import Order
+
+Imports should be grouped in the following order:
+
+1. Standard Library
+
+2. Third-Party Libraries
+
+3. Harmony AI Packages
+
+Separate groups with blank lines.
+
+---
+
+## 10.2 Wildcard Imports
+
+Never use:
+
+```
+from module import *
+```
+
+Explicit imports improve readability.
+
+---
+
+## 10.3 Relative Imports
+
+Prefer absolute imports.
+
+Relative imports should be limited to closely related modules.
+
+---
+
+## 10.4 Unused Imports
+
+Unused imports should be removed.
+
+Static analysis should report them.
+
+---
+
+## 10.5 Import Aliases
+
+Aliases should only be used when they improve readability.
+
+Avoid unnecessary abbreviations.
+
+---
+
+## 10.6 Optional Dependencies
+
+Optional dependencies should be isolated.
+
+Core functionality should remain operational whenever possible.
+
+---
+
+## 10.7 Lazy Imports
+
+Lazy imports may be used to:
+
+- Improve startup time.
+- Reduce optional dependencies.
+- Avoid circular imports.
+
+Use only when justified.
+
+---
+
+## 10.8 Chapter Summary
+
+The Python Standards establish a consistent coding style across Harmony AI.
+
+Following these standards improves readability, maintainability, tooling support, and long-term software quality while reducing unnecessary variation between contributors.
+
+---
+
+**End of Part 2**
+
+**Next: Part 3 — Architecture Standards**
+
+Chapters:
+
+11. Clean Architecture
+
+12. SOLID Principles
+
+13. Repository Pattern
+
+14. Dependency Injection
+
+15. Event-Driven Architecture
