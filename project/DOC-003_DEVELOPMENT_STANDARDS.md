@@ -2303,3 +2303,454 @@ Next:
 
 Chapters:
 
+# Part VI — Templates & Checklists
+
+# Chapter 26 — File Template
+
+## 26.1 Purpose
+
+Every source file within Harmony AI should follow a consistent structure.
+
+A predictable layout improves readability, maintainability, and onboarding.
+
+---
+
+## 26.2 Standard File Layout
+
+Every Python module should follow this general structure.
+
+```
+Module Docstring
+
+Imports
+
+Constants
+
+Type Aliases
+
+Enums
+
+Exceptions
+
+Interfaces (if applicable)
+
+Data Classes
+
+Business Classes
+
+Helper Functions
+
+Public Functions
+```
+
+Maintain this order unless there is a compelling reason not to.
+
+---
+
+## 26.3 Module Header
+
+Every public module should begin with a module docstring describing:
+
+- Purpose
+- Responsibilities
+- Related Modules
+- Author (optional)
+- Version (optional)
+
+---
+
+## 26.4 Imports
+
+Organize imports as follows:
+
+1. Standard Library
+
+2. Third-Party Packages
+
+3. Harmony AI Packages
+
+Separate each group with one blank line.
+
+---
+
+## 26.5 Constants
+
+Constants should appear near the top of the file.
+
+Group related constants together.
+
+Avoid scattered constant definitions.
+
+---
+
+## 26.6 Public API
+
+Public classes and functions should appear before internal helper functions whenever practical.
+
+---
+
+## 26.7 Chapter Summary
+
+A consistent file structure improves discoverability, readability, and long-term maintenance.
+
+---
+
+# Chapter 27 — Module Template
+
+## 27.1 Purpose
+
+Modules should represent one clear responsibility.
+
+Large modules should be divided into smaller focused modules.
+
+---
+
+## 27.2 Module Responsibilities
+
+Each module should answer:
+
+- What does this module do?
+- What does it not do?
+- Which module depends on it?
+- Which module does it depend upon?
+
+---
+
+## 27.3 Module Organization
+
+A module should include:
+
+- Public API
+- Internal implementation
+- Configuration
+- Error handling
+- Logging
+- Documentation
+
+---
+
+## 27.4 Module Checklist
+
+☐ Single responsibility
+
+☐ Clear public API
+
+☐ Logging included
+
+☐ Exceptions handled
+
+☐ Documentation written
+
+☐ Tests planned
+
+---
+
+## 27.5 Chapter Summary
+
+Modules should remain focused, reusable, and easy to understand.
+
+---
+
+# Chapter 28 — Class Template
+
+## 28.1 Purpose
+
+Classes model concepts within Harmony AI.
+
+Each class should have one primary responsibility.
+
+---
+
+## 28.2 Class Design Rules
+
+Every class should:
+
+- Represent one concept.
+- Expose a minimal public interface.
+- Hide implementation details.
+- Support unit testing.
+
+---
+
+## 28.3 Constructor Guidelines
+
+Constructors should:
+
+- Initialize dependencies.
+- Validate required inputs.
+- Avoid expensive operations.
+- Avoid business logic.
+
+---
+
+## 28.4 Public Methods
+
+Public methods should:
+
+- Be descriptive.
+- Be predictable.
+- Return meaningful results.
+- Raise meaningful exceptions.
+
+---
+
+## 28.5 Private Methods
+
+Private methods support implementation details.
+
+They should not become alternative public APIs.
+
+---
+
+## 28.6 Class Checklist
+
+☐ Single responsibility
+
+☐ Dependencies injected
+
+☐ Public API documented
+
+☐ Logging appropriate
+
+☐ Error handling complete
+
+☐ Unit tests planned
+
+---
+
+## 28.7 Chapter Summary
+
+Classes should model business concepts while remaining simple, focused, and testable.
+
+---
+
+# Chapter 29 — Function Template
+
+## 29.1 Purpose
+
+Functions perform individual operations.
+
+Functions should remain small, focused, and easy to understand.
+
+---
+
+## 29.2 Function Design
+
+Every function should:
+
+- Perform one task.
+- Have a descriptive name.
+- Accept only required parameters.
+- Return meaningful values.
+
+---
+
+## 29.3 Function Size
+
+Recommended target:
+
+Less than 40 lines.
+
+Large functions should be decomposed.
+
+---
+
+## 29.4 Parameters
+
+Keep parameter lists concise.
+
+If many parameters are required, consider:
+
+- Data Classes
+- Configuration Objects
+- Value Objects
+
+---
+
+## 29.5 Return Values
+
+Functions should return:
+
+- Domain objects
+- DTOs
+- Explicit status
+
+Avoid ambiguous return values.
+
+---
+
+## 29.6 Side Effects
+
+Minimize side effects.
+
+Functions should be predictable whenever practical.
+
+---
+
+## 29.7 Function Checklist
+
+☐ Purpose clear
+
+☐ Parameters validated
+
+☐ Return value documented
+
+☐ Exceptions documented
+
+☐ Logging considered
+
+☐ Unit test planned
+
+---
+
+## 29.8 Chapter Summary
+
+Small, focused functions improve readability, testing, and maintainability.
+
+---
+
+# Chapter 30 — Implementation Checklist
+
+## 30.1 Purpose
+
+Every implementation should follow the same engineering checklist before completion.
+
+This checklist serves as the minimum quality standard.
+
+---
+
+## 30.2 Planning
+
+Before implementation:
+
+☐ Requirements reviewed
+
+☐ Architecture approved
+
+☐ Prompt approved
+
+☐ Scope understood
+
+---
+
+## 30.3 Implementation
+
+During implementation:
+
+☐ Naming standards followed
+
+☐ Type hints included
+
+☐ Logging added
+
+☐ Error handling complete
+
+☐ Configuration externalized
+
+☐ No duplicated code
+
+☐ Documentation updated
+
+---
+
+## 30.4 Review
+
+Before review:
+
+☐ Self-review completed
+
+☐ Formatting applied
+
+☐ Linting passed
+
+☐ Static analysis completed
+
+☐ Tests passing
+
+---
+
+## 30.5 Quality Assurance
+
+Before QA:
+
+☐ Acceptance criteria verified
+
+☐ Edge cases considered
+
+☐ Performance acceptable
+
+☐ Security reviewed
+
+---
+
+## 30.6 Release Readiness
+
+Before merge:
+
+☐ Documentation updated
+
+☐ PROJECT.md updated
+
+☐ Changelog updated
+
+☐ Commit message prepared
+
+☐ Ready for Code Review
+
+---
+
+## 30.7 Engineering Completion Checklist
+
+A Harmony AI task is complete only when:
+
+☐ Requirements complete
+
+☐ Architecture complete
+
+☐ Implementation complete
+
+☐ Tests passing
+
+☐ Documentation updated
+
+☐ Review approved
+
+☐ QA approved
+
+☐ Git commit prepared
+
+☐ PROJECT.md updated
+
+---
+
+## 30.8 Chapter Summary
+
+Standardized templates and checklists promote consistent engineering practices and reduce avoidable mistakes.
+
+Every implementation should satisfy these requirements before progressing to the next stage of the development lifecycle.
+
+---
+
+# End of Part 6
+
+Next:
+
+# Part VII — Appendices & Final Approval
+
+Contents:
+
+31. Recommended Development Tools
+
+32. Recommended Project Configuration
+
+33. Coding Anti-Patterns
+
+34. Engineering Glossary
+
+35. Document Maintenance
+
+36. Final Summary
+
+37. Approval & Revision History
+
+End of DOC-003
