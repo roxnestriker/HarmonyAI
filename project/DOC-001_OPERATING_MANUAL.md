@@ -1104,3 +1104,313 @@ Every contributor, whether human or AI, is expected to follow the governance fra
 ---
 
 **End of Chapter 4**
+---
+
+# Chapter 5 — Development Lifecycle
+
+## 5.1 Purpose
+
+The Harmony AI Development Lifecycle defines the standard process for planning, designing, implementing, reviewing, testing, documenting, and releasing every feature.
+
+The objective is to produce high-quality software through a repeatable, predictable, and well-documented workflow.
+
+Every feature, regardless of size, should follow this lifecycle.
+
+---
+
+## 5.2 Core Principle
+
+Harmony AI follows the principle:
+
+> **Design First, Implement Second**
+
+Implementation shall never begin before the problem, requirements, architecture, and acceptance criteria have been defined.
+
+Planning is considered part of software development rather than an optional activity.
+
+---
+
+## 5.3 Feature Lifecycle
+
+Every feature follows the same lifecycle.
+
+```
+Idea
+    ↓
+Research
+    ↓
+Discussion
+    ↓
+Requirements
+    ↓
+Architecture
+    ↓
+Database Design (if required)
+    ↓
+API Design (if required)
+    ↓
+UI Design (if required)
+    ↓
+Implementation Prompt
+    ↓
+Implementation
+    ↓
+Code Review
+    ↓
+Testing
+    ↓
+Documentation
+    ↓
+Approval
+    ↓
+Release
+```
+
+No stage should be skipped unless explicitly approved.
+
+---
+
+## 5.4 Requirements Phase
+
+Every feature begins by answering:
+
+- What problem is being solved?
+- Why is this feature needed?
+- Who benefits from it?
+- What are the expected outcomes?
+- What are the success criteria?
+
+Requirements should focus on user needs rather than implementation details.
+
+---
+
+## 5.5 Research Phase
+
+Before implementation begins, existing solutions should be researched.
+
+Research may include:
+
+- Existing open-source projects
+- Industry best practices
+- Performance considerations
+- Alternative approaches
+- Technology evaluation
+
+Research findings should be documented when they influence project decisions.
+
+---
+
+## 5.6 Architecture Phase
+
+Architecture defines how the feature integrates into Harmony AI.
+
+Topics include:
+
+- Module ownership
+- Interfaces
+- Dependencies
+- Events
+- Data flow
+- Configuration
+- Extensibility
+
+Architecture should minimize coupling and maximize maintainability.
+
+---
+
+## 5.7 Prompt Generation Phase
+
+Harmony AI uses Prompt-Driven Development.
+
+Before coding begins, the Chief Architect prepares a detailed implementation prompt.
+
+Implementation prompts should include:
+
+- Objective
+- Context
+- Files to create
+- Files to modify
+- Architecture constraints
+- Coding standards
+- Logging requirements
+- Error handling
+- Testing expectations
+- Acceptance criteria
+
+Prompts should be reusable whenever practical.
+
+---
+
+## 5.8 Implementation Phase
+
+Implementation is performed in a dedicated coding environment or coding AI thread.
+
+Implementation should follow:
+
+- Approved architecture
+- Development Standards
+- Prompt requirements
+- Project documentation
+
+Developers should avoid making undocumented architectural decisions during implementation.
+
+---
+
+## 5.9 Code Review Phase
+
+Every implementation undergoes review.
+
+The review evaluates:
+
+- Correctness
+- Readability
+- Maintainability
+- Performance
+- Security
+- Testability
+- Documentation
+- Compliance with project standards
+
+Review feedback should be constructive and evidence-based.
+
+---
+
+## 5.10 Testing Phase
+
+Testing verifies that the feature satisfies its requirements.
+
+Testing may include:
+
+- Unit tests
+- Integration tests
+- Edge-case validation
+- Regression testing
+- Performance validation
+
+Features should not be considered complete until appropriate testing has been performed.
+
+---
+
+## 5.11 Documentation Phase
+
+Documentation is updated before a feature is considered complete.
+
+Documentation may include:
+
+- User Guide
+- Developer Guide
+- API Documentation
+- Database Documentation
+- Architecture Documents
+- Project Dashboard
+
+Documentation and implementation must remain synchronized.
+
+---
+
+## 5.12 Approval Phase
+
+Before merging a feature into the main branch, confirm that:
+
+- Requirements are satisfied.
+- Code review is complete.
+- Tests pass.
+- Documentation is updated.
+- No unresolved blockers remain.
+
+Approval signifies readiness for integration.
+
+---
+
+## 5.13 Release Phase
+
+Completed features become part of the next planned release.
+
+Release preparation includes:
+
+- Version update
+- Changelog update
+- Documentation review
+- Final testing
+- Release notes
+
+Releases should be stable, repeatable, and well documented.
+
+---
+
+## 5.14 Daily Development Workflow
+
+Every development session follows this sequence:
+
+1. Pull the latest changes from GitHub.
+2. Review `PROJECT.md`.
+3. Identify the current task.
+4. Discuss architecture if required.
+5. Generate implementation prompt.
+6. Complete implementation.
+7. Perform code review.
+8. Execute testing.
+9. Update documentation.
+10. Update `PROJECT.md`.
+11. Commit changes.
+12. Push to GitHub.
+
+This workflow applies to both documentation and software development.
+
+---
+
+## 5.15 Definition of Ready
+
+A feature is considered ready for implementation when:
+
+- Requirements are complete.
+- Scope is defined.
+- Architecture is approved.
+- Dependencies are identified.
+- Acceptance criteria are documented.
+- Implementation prompt has been prepared.
+
+---
+
+## 5.16 Definition of Done
+
+A feature is considered complete only when:
+
+- Implementation is finished.
+- Code review is approved.
+- Testing is complete.
+- Documentation is updated.
+- PROJECT.md reflects completion.
+- Changes are committed and pushed.
+- Outstanding issues are documented.
+
+Completion requires both functional correctness and engineering completeness.
+
+---
+
+## 5.17 Continuous Improvement
+
+The development lifecycle is expected to evolve.
+
+Improvements should be:
+
+- Documented
+- Reviewed
+- Approved
+- Backward compatible whenever practical
+
+Changes should simplify development without reducing quality.
+
+---
+
+## 5.18 Chapter Summary
+
+Harmony AI follows a structured, documentation-driven development lifecycle.
+
+Every feature progresses through clearly defined phases from idea to release.
+
+This process promotes quality, maintainability, and consistency while enabling effective collaboration between human contributors and AI specialists.
+
+---
+
+**End of Chapter 5**
