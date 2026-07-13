@@ -18,7 +18,7 @@
 | Version | Date | Description | Author |
 |----------|------|-------------|--------|
 | 1.0.0 | 2026-07-13 | Initial draft | Chief Architect |
-
+| 1.0.1 | 2026-07-13 | Initial draft | Chief Architect |
 ---
 
 # Table of Contents
