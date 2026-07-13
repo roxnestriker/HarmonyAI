@@ -551,4 +551,350 @@ Its responsibilities include discovering audio files, maintaining accurate metad
 Next:
 
 # Part III — Non-Functional Requirements
+# Part III — Non-Functional Requirements
 
+# Chapter 11 — Performance
+
+## 11.1 Purpose
+
+The Music Library shall provide fast, responsive, and scalable performance for collections ranging from a few hundred songs to several hundred thousand songs.
+
+Performance shall remain predictable as the library grows.
+
+---
+
+## 11.2 Performance Goals
+
+The Music Library should:
+
+- Start quickly.
+- Scan efficiently.
+- Respond instantly to user interactions.
+- Minimize unnecessary disk access.
+- Optimize database queries.
+- Reduce memory consumption.
+
+---
+
+## 11.3 Initial Scan
+
+The initial scan should:
+
+- Discover all supported audio files.
+- Extract metadata.
+- Build the database.
+- Generate progress updates.
+- Recover from individual file failures.
+
+Large libraries should remain responsive during scanning.
+
+---
+
+## 11.4 Incremental Scan
+
+Incremental scans should process only:
+
+- New files
+- Modified files
+- Deleted files
+- Renamed files
+
+Unchanged files should not be reprocessed unnecessarily.
+
+---
+
+## 11.5 Search Performance
+
+Library searches should return results quickly regardless of collection size.
+
+Search performance should remain consistent for:
+
+- Song title
+- Artist
+- Album
+- Genre
+- Composer
+- File path
+
+Future semantic searches shall build upon the same indexing strategy.
+
+---
+
+## 11.6 Database Performance
+
+Database operations should:
+
+- Use appropriate indexes.
+- Avoid unnecessary joins.
+- Minimize full-table scans.
+- Support efficient pagination.
+
+---
+
+## 11.7 Resource Usage
+
+The Music Library should:
+
+- Minimize CPU usage during idle periods.
+- Release unused memory.
+- Avoid unnecessary disk writes.
+- Support background processing.
+
+---
+
+## 11.8 Chapter Summary
+
+Performance should scale with the user's collection while maintaining a responsive user experience.
+
+---
+
+# Chapter 12 — Reliability
+
+## 12.1 Purpose
+
+The Music Library shall operate reliably under normal and abnormal conditions.
+
+Failures should be isolated whenever possible without affecting the remainder of the library.
+
+---
+
+## 12.2 Fault Tolerance
+
+The system should continue operating when:
+
+- A file is corrupted.
+- Metadata cannot be read.
+- Artwork is missing.
+- Individual folders become unavailable.
+- Unsupported formats are encountered.
+
+---
+
+## 12.3 Data Integrity
+
+Harmony AI shall ensure:
+
+- Accurate metadata storage.
+- Consistent database state.
+- Safe updates.
+- Reliable synchronization.
+
+Database corruption should be prevented through transactional operations where appropriate.
+
+---
+
+## 12.4 Recovery
+
+If scanning is interrupted, the system should:
+
+- Resume safely.
+- Avoid duplicate entries.
+- Preserve completed work.
+- Record failures for later review.
+
+---
+
+## 12.5 Logging
+
+Operational events should be logged to assist troubleshooting while avoiding unnecessary verbosity.
+
+---
+
+## 12.6 Chapter Summary
+
+Reliability ensures that the Music Library remains dependable even when unexpected conditions occur.
+
+---
+
+# Chapter 13 — Scalability
+
+## 13.1 Purpose
+
+The Music Library shall support future growth without requiring major architectural changes.
+
+---
+
+## 13.2 Library Size
+
+The architecture should support:
+
+- Small libraries
+- Medium libraries
+- Large personal collections
+- Multi-drive collections
+
+Future versions should support cloud-based libraries.
+
+---
+
+## 13.3 Modular Growth
+
+Future capabilities should integrate without redesigning the core library.
+
+Examples:
+
+- AI Recommendations
+- Cloud Synchronization
+- Plugin System
+- Mobile Synchronization
+- Voice Assistant
+
+---
+
+## 13.4 Extensibility
+
+The system should allow additional:
+
+- Audio formats
+- Metadata providers
+- Artwork providers
+- Recommendation engines
+- Cloud providers
+
+through modular extensions.
+
+---
+
+## 13.5 Chapter Summary
+
+Scalability allows Harmony AI to evolve while preserving compatibility with existing libraries.
+
+---
+
+# Chapter 14 — Security
+
+## 14.1 Purpose
+
+Harmony AI shall protect user data while maintaining an offline-first architecture.
+
+---
+
+## 14.2 User Data Protection
+
+Harmony AI shall:
+
+- Never expose user music without permission.
+- Avoid collecting unnecessary information.
+- Store only required metadata.
+- Respect user privacy.
+
+---
+
+## 14.3 File Protection
+
+Harmony AI shall never:
+
+- Modify audio data without user approval.
+- Delete files automatically.
+- Overwrite user files unexpectedly.
+
+---
+
+## 14.4 External Services
+
+Future online services shall be optional.
+
+Offline functionality shall remain fully supported.
+
+---
+
+## 14.5 Secure Configuration
+
+Sensitive configuration values should be stored securely and never embedded directly within source code.
+
+---
+
+## 14.6 Chapter Summary
+
+Security requirements protect the user's collection while supporting Harmony AI's privacy-focused philosophy.
+
+---
+
+# Chapter 15 — Maintainability
+
+## 15.1 Purpose
+
+The Music Library shall remain maintainable throughout the lifetime of the project.
+
+Maintainability enables future enhancements while reducing technical debt.
+
+---
+
+## 15.2 Architectural Maintainability
+
+The module shall follow:
+
+- Clean Architecture
+- SOLID Principles
+- Repository Pattern
+- Dependency Injection
+
+as defined in DOC-003.
+
+---
+
+## 15.3 Documentation
+
+All significant components shall include:
+
+- Requirements
+- Architecture
+- API documentation
+- Database documentation
+- Unit tests
+
+Documentation shall remain synchronized with implementation.
+
+---
+
+## 15.4 Code Quality
+
+Implementation shall prioritize:
+
+- Readability
+- Simplicity
+- Reusability
+- Testability
+- Modularity
+
+---
+
+## 15.5 Future Evolution
+
+The Music Library shall support future enhancements without requiring major redesign.
+
+Examples include:
+
+- AI-powered recommendations
+- Semantic search
+- Audio fingerprinting
+- Cloud synchronization
+- Multi-user support
+
+---
+
+## 15.6 Chapter Summary
+
+Maintainability ensures that the Music Library can continue evolving while preserving stability, readability, and engineering quality.
+
+---
+
+# End of Part 3
+
+Next:
+
+# Part IV — User Experience
+
+Chapters:
+
+16. User Stories
+
+17. Acceptance Criteria
+
+18. Out of Scope
+
+19. Future Enhancements
+
+20. PRD Summary
+
+This will complete **PRD-001 — Music Library Management System**.
