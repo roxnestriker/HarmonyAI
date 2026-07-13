@@ -178,3 +178,238 @@ The Operating Manual is considered successful when it enables contributors to:
 ---
 
 **End of Chapter 1**
+
+---
+
+# Chapter 2 — Vision & Mission
+
+## 2.1 Vision
+
+Harmony AI exists to become the world's most advanced open-source personal music management ecosystem.
+
+The project is designed for users who value ownership, privacy, audio quality, and intelligent organization of their personal music collections.
+
+Rather than depending on commercial streaming services, Harmony AI empowers users to build, manage, discover, and enjoy their own music library using modern software engineering practices and artificial intelligence.
+
+The long-term vision is to create a platform that combines the convenience and intelligence of modern streaming services with the freedom, privacy, and control of locally managed music collections.
+
+Harmony AI is intended to become a lifelong companion for music enthusiasts who wish to preserve and explore their libraries without sacrificing ownership or audio quality.
+
+---
+
+## 2.2 Mission
+
+The mission of Harmony AI is to deliver a professional-grade, offline-first music ecosystem that provides intelligent organization, discovery, recommendation, synchronization, and analysis while ensuring that users remain in complete control of their data.
+
+Harmony AI will achieve this by:
+
+- Building modular and maintainable software.
+- Leveraging artificial intelligence to enhance the listening experience.
+- Preserving original audio quality.
+- Respecting user privacy.
+- Remaining transparent through open-source development.
+- Supporting long-term extensibility through plugins and APIs.
+
+---
+
+## 2.3 Long-Term Objectives
+
+Harmony AI aims to achieve the following strategic objectives over its lifetime:
+
+### Personal Music Library
+
+Provide a complete solution for organizing and managing personal music collections of any size.
+
+### Intelligent Discovery
+
+Help users rediscover forgotten music through AI-assisted recommendations and personalized playlists.
+
+### Metadata Excellence
+
+Maintain rich, accurate, and extensible metadata for artists, albums, tracks, genres, artwork, lyrics, and listening history.
+
+### Cross-Platform Experience
+
+Provide a consistent experience across Windows, Android, and future supported platforms.
+
+### AI Integration
+
+Use artificial intelligence to improve organization, search, recommendations, and user productivity without replacing user control.
+
+### Open Ecosystem
+
+Encourage community contributions through plugins, APIs, documentation, and open development practices.
+
+---
+
+## 2.4 Product Principles
+
+Every feature developed for Harmony AI must support the following principles.
+
+### Offline First
+
+The core application must function without an Internet connection.
+
+Online services should enhance functionality rather than provide essential capabilities.
+
+---
+
+### Privacy First
+
+Harmony AI shall collect no unnecessary user information.
+
+User data remains under the user's ownership and control at all times.
+
+---
+
+### User Ownership
+
+Users own their music, metadata, playlists, preferences, and listening history.
+
+Harmony AI should never lock users into proprietary formats.
+
+---
+
+### Preserve Audio Quality
+
+Harmony AI shall never intentionally reduce audio quality.
+
+Original files must remain untouched unless the user explicitly requests modifications.
+
+---
+
+### AI as an Assistant
+
+Artificial intelligence exists to assist users rather than replace their decisions.
+
+Recommendations should always remain explainable and user-controlled.
+
+---
+
+### Extensible Architecture
+
+Every major subsystem should be designed to support future extensions without requiring major architectural changes.
+
+---
+
+### Open Standards
+
+Wherever practical, Harmony AI should rely on open standards, documented interfaces, and widely adopted technologies.
+
+---
+
+## 2.5 Engineering Principles
+
+Harmony AI engineering decisions shall prioritize:
+
+- Simplicity
+- Maintainability
+- Scalability
+- Reliability
+- Testability
+- Reusability
+- Performance
+- Security
+- Documentation
+- Automation
+
+Engineering excellence is preferred over rapid delivery.
+
+The project favors long-term maintainability over short-term convenience.
+
+---
+
+## 2.6 Success Metrics
+
+Harmony AI measures success through objective engineering outcomes rather than feature count.
+
+Examples include:
+
+### Performance
+
+- Fast library scanning.
+- Responsive user interface.
+- Efficient database queries.
+- Low memory usage.
+
+### Quality
+
+- Stable releases.
+- Minimal defects.
+- High documentation coverage.
+- Strong automated testing.
+
+### User Experience
+
+- Easy setup.
+- Fast search.
+- Intelligent recommendations.
+- Consistent interface.
+- Minimal configuration.
+
+### Community
+
+- Clear documentation.
+- Contributor-friendly architecture.
+- Transparent development process.
+- Reusable components.
+
+---
+
+## 2.7 Non-Goals
+
+Harmony AI intentionally avoids the following:
+
+- Downloading copyrighted music.
+- Circumventing DRM or streaming protections.
+- Depending on cloud services for core functionality.
+- Modifying original audio files automatically.
+- Collecting unnecessary user data.
+- Vendor lock-in.
+- Closed-source dependencies where suitable open alternatives exist.
+
+These boundaries protect both the project's technical direction and ethical standards.
+
+---
+
+## 2.8 Future Direction
+
+Harmony AI is designed to evolve continuously while remaining faithful to its founding principles.
+
+Future areas of development include:
+
+- Local AI assistants.
+- Semantic music search.
+- Voice interaction.
+- Audio fingerprinting.
+- Smart cloud synchronization.
+- Plugin marketplace.
+- Home media integration.
+- Recommendation engine improvements.
+- Advanced analytics.
+- Multi-user support.
+- Distributed library management.
+
+The project roadmap may evolve over time, but future development must remain consistent with the vision, mission, and principles defined within this manual.
+
+---
+
+## 2.9 Chapter Summary
+
+This chapter establishes the long-term identity of Harmony AI.
+
+Every future feature, architectural decision, engineering proposal, and user experience improvement should be evaluated against the principles defined in this chapter.
+
+When uncertainty exists regarding future direction, the project shall prioritize:
+
+- User ownership.
+- Privacy.
+- Offline-first operation.
+- Software quality.
+- Long-term maintainability.
+
+These values define Harmony AI and distinguish it from traditional streaming-based music platforms.
+
+---
+
+**End of Chapter 2**
