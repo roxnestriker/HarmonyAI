@@ -1161,3 +1161,370 @@ A structured Pull Request process protects the quality and stability of Harmony 
 Next:
 
 # Part IV — Maintenance
+
+# Chapter 16 — Updating Dependencies
+
+## 16.1 Purpose
+
+Software dependencies evolve over time.
+
+Regular updates improve security, compatibility, performance, and long-term maintainability.
+
+Harmony AI should update dependencies in a controlled and documented manner.
+
+---
+
+## 16.2 Update Policy
+
+Dependencies should be reviewed periodically.
+
+Review categories include:
+
+- Security updates
+- Bug fixes
+- Performance improvements
+- Major version upgrades
+- Deprecated libraries
+
+Major upgrades should be evaluated before adoption.
+
+---
+
+## 16.3 Update Process
+
+Standard dependency update workflow:
+
+```
+Check for Updates
+
+↓
+
+Review Release Notes
+
+↓
+
+Create Feature Branch
+
+↓
+
+Update Dependencies
+
+↓
+
+Run Tests
+
+↓
+
+Review
+
+↓
+
+Merge
+```
+
+---
+
+## 16.4 Validation
+
+After updating dependencies verify:
+
+- Application starts successfully.
+- Tests pass.
+- Documentation remains accurate.
+- No deprecated APIs are introduced.
+
+---
+
+## 16.5 Chapter Summary
+
+Controlled dependency management reduces technical risk while keeping Harmony AI current.
+
+---
+
+# Chapter 17 — Backup Strategy
+
+## 17.1 Purpose
+
+Project assets should be protected against accidental loss or corruption.
+
+The GitHub repository serves as the primary backup, supported by local copies where appropriate.
+
+---
+
+## 17.2 Repository Backup
+
+Every completed task should be:
+
+- Committed locally.
+- Pushed to GitHub.
+- Verified after synchronization.
+
+The GitHub repository is the authoritative source for project history.
+
+---
+
+## 17.3 Local Backups
+
+Recommended local backup locations include:
+
+```
+D:\Projects\backups\
+```
+
+Backup items include:
+
+- Repository clone
+- Documentation
+- Automation scripts
+- Configuration files
+
+---
+
+## 17.4 Recovery
+
+In the event of data loss:
+
+1. Clone the latest repository.
+2. Restore local configuration if necessary.
+3. Verify project integrity.
+4. Resume development.
+
+---
+
+## 17.5 Chapter Summary
+
+A reliable backup strategy protects the project's long-term continuity.
+
+---
+
+# Chapter 18 — Troubleshooting
+
+## 18.1 Purpose
+
+Development issues should be resolved systematically.
+
+Documenting common problems reduces repeated troubleshooting effort.
+
+---
+
+## 18.2 General Process
+
+When a problem occurs:
+
+1. Identify the issue.
+2. Review recent changes.
+3. Consult project documentation.
+4. Reproduce the issue.
+5. Apply corrective action.
+6. Verify the solution.
+
+---
+
+## 18.3 Common Issues
+
+Examples include:
+
+- Git merge conflicts
+- Dependency installation failures
+- Virtual environment problems
+- Python version mismatches
+- Missing configuration files
+
+---
+
+## 18.4 Reporting Issues
+
+When reporting an issue include:
+
+- Description
+- Steps to reproduce
+- Expected behavior
+- Actual behavior
+- Environment details
+- Relevant logs
+
+---
+
+## 18.5 Chapter Summary
+
+A structured troubleshooting process improves efficiency and preserves engineering knowledge.
+
+---
+
+# Chapter 19 — Frequently Used Commands
+
+## 19.1 Purpose
+
+This chapter lists commonly used commands during development.
+
+Commands should be reviewed periodically as the project evolves.
+
+---
+
+## 19.2 Git Commands
+
+Typical commands include:
+
+```
+git status
+
+git pull
+
+git add .
+
+git commit -m "message"
+
+git push
+
+git branch
+
+git checkout
+```
+
+---
+
+## 19.3 Python Commands
+
+Typical commands include:
+
+```
+python --version
+
+python -m venv .venv
+
+pip install -r requirements.txt
+
+pytest
+```
+
+---
+
+## 19.4 Development Commands
+
+As Harmony AI grows, this section should include commands for:
+
+- Running the desktop application
+- Running the API
+- Running tests
+- Formatting code
+- Static analysis
+- Documentation generation
+
+---
+
+## 19.5 Chapter Summary
+
+Maintaining a list of common commands improves productivity and simplifies onboarding.
+
+---
+
+# Chapter 20 — Bootstrap Checklist
+
+## 20.1 Purpose
+
+This checklist confirms that a contributor has successfully completed the Harmony AI bootstrap process.
+
+---
+
+## 20.2 Environment Checklist
+
+☐ Python installed
+
+☐ Git installed
+
+☐ Visual Studio Code installed
+
+☐ Required extensions installed
+
+☐ Repository cloned
+
+☐ Virtual environment created
+
+☐ Dependencies installed
+
+---
+
+## 20.3 Project Checklist
+
+☐ Repository synchronized
+
+☐ Documentation available
+
+☐ PROJECT.md reviewed
+
+☐ Development Standards reviewed
+
+☐ AI Team Handbook reviewed
+
+☐ Operating Manual reviewed
+
+---
+
+## 20.4 Verification Checklist
+
+☐ Project opens successfully
+
+☐ Tests execute successfully
+
+☐ Git status clean
+
+☐ Development environment operational
+
+---
+
+## 20.5 Ready to Develop
+
+A contributor is ready to begin development when:
+
+- Environment setup is complete.
+- Documentation has been reviewed.
+- Repository is synchronized.
+- Development tools are operational.
+- Current project status is understood.
+
+---
+
+## 20.6 Final Summary
+
+The Project Bootstrap Guide provides a standardized process for preparing and maintaining the Harmony AI development environment.
+
+Following this guide ensures that all contributors begin development from a consistent foundation, reducing configuration issues and improving engineering efficiency.
+
+---
+
+# Document Approval
+
+## Status
+
+Current Status:
+
+Draft
+
+This document shall become **Approved** after review and acceptance by the Project Owner.
+
+---
+
+## Approval Record
+
+| Role | Name | Status |
+|------|------|--------|
+| Project Owner | Project Owner | Pending |
+| Chief Architect | Chief Architect | Approved |
+
+---
+
+## Revision History
+
+| Version | Date | Description | Author |
+|----------|------|-------------|--------|
+|1.0.0|2026-07-13|Initial Draft|Chief Architect|
+
+---
+
+# End of Document
+
+**DOC-004 — Project Bootstrap Guide**
+
+Version 1.0.0
+
+End of File
