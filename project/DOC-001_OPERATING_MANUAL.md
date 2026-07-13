@@ -2576,3 +2576,224 @@ Quality is achieved through disciplined engineering practices, structured review
 ---
 
 **End of Chapter 9**
+---
+
+# Chapter 10 — Release Management
+
+## 10.1 Purpose
+
+Release Management defines the process for preparing, validating, approving, and publishing Harmony AI releases.
+
+The objective is to ensure that every release is stable, documented, reproducible, and aligned with the project's engineering standards.
+
+Releases represent project milestones rather than simply collections of completed tasks.
+
+---
+
+## 10.2 Release Philosophy
+
+Harmony AI follows the principle:
+
+> **Release only when the software is ready, not when the calendar demands it.**
+
+Quality always takes precedence over release frequency.
+
+A smaller, stable release is preferred over a larger release containing unfinished or poorly tested features.
+
+---
+
+## 10.3 Release Types
+
+Harmony AI recognizes the following release types.
+
+### Major Release
+
+Examples:
+
+- v1.0.0
+- v2.0.0
+
+Major releases introduce significant new capabilities, architectural changes, or compatibility changes.
+
+---
+
+### Minor Release
+
+Examples:
+
+- v0.2.0
+- v0.5.0
+
+Minor releases introduce new features while maintaining compatibility.
+
+---
+
+### Patch Release
+
+Examples:
+
+- v0.2.1
+- v0.5.3
+
+Patch releases resolve defects, improve stability, and make small enhancements without introducing major functionality.
+
+---
+
+## 10.4 Versioning Standard
+
+Harmony AI follows Semantic Versioning.
+
+Format:
+
+MAJOR.MINOR.PATCH
+
+Examples:
+
+- v0.1.0
+- v0.3.2
+- v1.0.0
+
+Version numbers should communicate the significance of changes.
+
+---
+
+## 10.5 Release Planning
+
+Every release should define:
+
+- Objectives
+- Scope
+- Included features
+- Deferred features
+- Known limitations
+- Target version
+- Expected completion criteria
+
+Release scope should remain stable once development begins.
+
+---
+
+## 10.6 Release Checklist
+
+Before publishing a release, verify that:
+
+- All planned features are complete.
+- Acceptance criteria are satisfied.
+- Code review is complete.
+- Testing has passed.
+- Documentation is updated.
+- CHANGELOG.md is current.
+- PROJECT.md reflects the latest project status.
+- No critical defects remain.
+
+---
+
+## 10.7 Documentation Requirements
+
+Every release must include:
+
+- Updated CHANGELOG
+- Release notes
+- Updated documentation
+- Version information
+- Migration notes (if required)
+
+Documentation is part of the release and is not optional.
+
+---
+
+## 10.8 Release Notes
+
+Release notes should summarize:
+
+- New features
+- Improvements
+- Bug fixes
+- Known issues
+- Breaking changes
+- Upgrade instructions (if applicable)
+
+Release notes should be understandable by both technical and non-technical users.
+
+---
+
+## 10.9 Release Approval
+
+A release is considered approved only when:
+
+- Engineering review is complete.
+- QA approval is granted.
+- Documentation review is complete.
+- Project Owner approves publication.
+
+Approval represents confidence in the release quality.
+
+---
+
+## 10.10 Post-Release Activities
+
+After every release:
+
+- Update PROJECT.md
+- Update ROADMAP.md (if required)
+- Record lessons learned
+- Review technical debt
+- Begin planning the next milestone
+
+Each release serves as a starting point for future improvements.
+
+---
+
+## 10.11 Hotfix Process
+
+Critical defects discovered after release should follow a dedicated hotfix process.
+
+Hotfixes should:
+
+- Address only the critical issue.
+- Avoid unrelated changes.
+- Be tested independently.
+- Include updated release notes.
+
+---
+
+## 10.12 Release Archive
+
+Historical releases should remain available for reference.
+
+Each release should preserve:
+
+- Version number
+- Release date
+- Changelog
+- Documentation snapshot
+- Git tag
+
+This ensures traceability throughout the project's lifetime.
+
+---
+
+## 10.13 Success Criteria
+
+A successful release is:
+
+- Stable
+- Well documented
+- Fully reviewed
+- Properly tested
+- Easily reproducible
+- Clearly versioned
+
+The quality of a release is measured by its reliability rather than the number of included features.
+
+---
+
+## 10.14 Chapter Summary
+
+Release Management transforms completed engineering work into reliable software that users can trust.
+
+A disciplined release process protects software quality, preserves project history, and provides confidence for contributors and users alike.
+
+---
+
+**End of Chapter 10**
