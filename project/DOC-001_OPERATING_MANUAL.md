@@ -1700,3 +1700,315 @@ Clearly defined responsibilities, documentation-driven communication, and prompt
 ---
 
 **End of Chapter 6**
+---
+
+# Chapter 7 — Documentation Policy
+
+## 7.1 Purpose
+
+Documentation is a core component of Harmony AI and is considered equal in importance to source code.
+
+The purpose of this policy is to ensure that all project knowledge is captured, maintained, and easily accessible throughout the project's lifetime.
+
+Good documentation reduces technical debt, improves collaboration, simplifies onboarding, and preserves architectural decisions.
+
+---
+
+## 7.2 Documentation Philosophy
+
+Harmony AI follows the principle:
+
+> **If it is important enough to build, it is important enough to document.**
+
+Documentation should explain not only **what** was built but also **why** it was built and **how** it integrates into the overall architecture.
+
+Documentation should always be:
+
+- Accurate
+- Clear
+- Consistent
+- Version controlled
+- Easy to maintain
+
+---
+
+## 7.3 Documentation Hierarchy
+
+Project documentation is organized into the following hierarchy:
+
+### Level 1 — Governance Documents
+
+Examples:
+
+- DOC-000 Harmony AI Context
+- DOC-001 Operating Manual
+- DOC-002 AI Team Handbook
+- DOC-003 Development Standards
+- DOC-004 Project Bootstrap
+
+These define how the project operates.
+
+---
+
+### Level 2 — Project Management
+
+Examples:
+
+- PROJECT.md
+- ROADMAP.md
+- TASKS.md
+- FEATURES.md
+- BUGS.md
+- TECH_DEBT.md
+- CHANGELOG.md
+
+These documents describe the current project state.
+
+---
+
+### Level 3 — Architecture
+
+Examples:
+
+- Architecture documents
+- Database documentation
+- API documentation
+- ADRs
+- RFCs
+
+These explain system design.
+
+---
+
+### Level 4 — Feature Documentation
+
+Each major feature should have documentation describing:
+
+- Purpose
+- Requirements
+- Architecture
+- User Workflow
+- Configuration
+- Testing
+- Future Enhancements
+
+---
+
+### Level 5 — User Documentation
+
+Examples:
+
+- Installation Guide
+- User Guide
+- FAQ
+- Tutorials
+- Troubleshooting
+
+---
+
+## 7.4 Documentation Ownership
+
+Every document has an owner responsible for keeping it current.
+
+Documentation ownership shall be recorded in the document header.
+
+The owner is responsible for:
+
+- Reviewing changes
+- Maintaining accuracy
+- Updating revisions
+- Approving major updates
+
+---
+
+## 7.5 Documentation Lifecycle
+
+Documentation follows the same lifecycle as software.
+
+```
+Create
+    ↓
+Review
+    ↓
+Approve
+    ↓
+Publish
+    ↓
+Maintain
+    ↓
+Archive (if required)
+```
+
+Documentation should evolve continuously.
+
+---
+
+## 7.6 Version Control
+
+All documentation shall be maintained within the Git repository.
+
+Every meaningful documentation update must be committed with a descriptive commit message.
+
+Documentation shall never exist only in chat conversations or local notes.
+
+The Git repository is the single source of truth.
+
+---
+
+## 7.7 Document Structure
+
+Every official document should contain:
+
+- Document ID
+- Document Name
+- Version
+- Status
+- Owner
+- Maintained By
+- Last Updated
+- Related Documents
+- Revision History
+
+This ensures consistency across the entire project.
+
+---
+
+## 7.8 Status Lifecycle
+
+Official documents use the following status values:
+
+- Draft
+- Under Review
+- Approved
+- Deprecated
+- Archived
+
+Only approved documents are considered authoritative.
+
+---
+
+## 7.9 Documentation Review
+
+Before approving documentation, verify:
+
+- Accuracy
+- Grammar
+- Consistency
+- Formatting
+- Cross references
+- Version information
+- Technical correctness
+
+Documentation reviews should occur alongside code reviews whenever practical.
+
+---
+
+## 7.10 Synchronization
+
+Documentation must always remain synchronized with implementation.
+
+Whenever code changes affect:
+
+- Architecture
+- APIs
+- Configuration
+- User workflow
+- Database schema
+
+The corresponding documentation shall be updated before the work is considered complete.
+
+Outdated documentation is treated as a project defect.
+
+---
+
+## 7.11 Prompt Documentation
+
+Implementation prompts are engineering assets.
+
+Reusable prompts should be stored within the repository under the `prompts/` directory.
+
+Prompt documentation should include:
+
+- Purpose
+- Expected input
+- Expected output
+- Related documents
+- Revision history
+
+---
+
+## 7.12 Architecture Decisions
+
+Significant technical decisions shall be documented as ADRs.
+
+Each ADR should answer:
+
+- What decision was made?
+- Why was it made?
+- What alternatives were considered?
+- What are the long-term consequences?
+
+ADRs preserve engineering knowledge and reduce repeated discussions.
+
+---
+
+## 7.13 Project Dashboard
+
+`PROJECT.md` serves as the live operational dashboard.
+
+It should be updated whenever:
+
+- A milestone is completed.
+- A sprint changes.
+- A task is completed.
+- A blocker appears.
+- A release is published.
+
+PROJECT.md should always reflect the current project state.
+
+---
+
+## 7.14 Documentation Standards
+
+Documentation should prioritize:
+
+- Simplicity
+- Clarity
+- Professional formatting
+- Logical organization
+- Reusability
+
+Avoid unnecessary repetition.
+
+Whenever possible, reference existing documents instead of duplicating information.
+
+---
+
+## 7.15 Knowledge Preservation
+
+Important engineering knowledge should never depend solely on memory or conversation history.
+
+Project knowledge shall be preserved through:
+
+- Documentation
+- ADRs
+- RFCs
+- Engineering Logs
+- AI Memory Files
+- Prompt Library
+
+This ensures continuity even as contributors change over time.
+
+---
+
+## 7.16 Chapter Summary
+
+Documentation is one of Harmony AI's most valuable assets.
+
+Every document contributes to the long-term maintainability, transparency, and scalability of the project.
+
+Maintaining accurate documentation is a shared responsibility of every contributor, whether human or AI.
+
+---
+
+**End of Chapter 7**
