@@ -1327,3 +1327,483 @@ Event-Driven Architecture promotes loose coupling, modularity, and extensibility
 
 Next: Part 4 — Coding Standards
 
+# Part IV — Coding Standards
+
+# Chapter 16 — Logging Standards
+
+## 16.1 Purpose
+
+Logging provides visibility into application behavior, supports debugging, simplifies troubleshooting, and assists performance analysis.
+
+Logging should provide meaningful information without exposing sensitive data.
+
+Every module should generate logs that are consistent, structured, and actionable.
+
+---
+
+## 16.2 Logging Philosophy
+
+Logging exists to answer three questions:
+
+- What happened?
+- When did it happen?
+- Why did it happen?
+
+Logs should assist diagnosis rather than generate unnecessary noise.
+
+---
+
+## 16.3 Logging Levels
+
+Harmony AI uses the following logging levels.
+
+### DEBUG
+
+Detailed diagnostic information.
+
+Used during development and troubleshooting.
+
+---
+
+### INFO
+
+Normal application events.
+
+Examples:
+
+- Library scan started
+- Scan completed
+- Playlist generated
+
+---
+
+### WARNING
+
+Unexpected situations that do not stop execution.
+
+Examples:
+
+- Missing album artwork
+- Invalid metadata
+- Unsupported file skipped
+
+---
+
+### ERROR
+
+Recoverable failures.
+
+Examples:
+
+- Database connection failure
+- Metadata parsing error
+- Network timeout
+
+---
+
+### CRITICAL
+
+Unrecoverable failures requiring immediate attention.
+
+Examples:
+
+- Database corruption
+- Configuration failure
+- Startup failure
+
+---
+
+## 16.4 Logging Rules
+
+Logs should:
+
+- Be concise.
+- Be meaningful.
+- Include context.
+- Avoid duplication.
+- Never expose sensitive information.
+
+---
+
+## 16.5 Sensitive Information
+
+Never log:
+
+- Passwords
+- API keys
+- Authentication tokens
+- Personal information
+- Secret configuration values
+
+---
+
+## 16.6 Logging Format
+
+Every log entry should clearly identify:
+
+- Module
+- Operation
+- Severity
+- Message
+
+When appropriate include:
+
+- Duration
+- Resource
+- Exception information
+
+---
+
+## 16.7 Logging Checklist
+
+☐ Correct log level
+
+☐ Meaningful message
+
+☐ No secrets exposed
+
+☐ Useful context included
+
+☐ Duplicate logging avoided
+
+---
+
+## 16.8 Chapter Summary
+
+Logging improves observability and troubleshooting while protecting user privacy and maintaining consistent operational insight.
+
+---
+
+# Chapter 17 — Error Handling
+
+## 17.1 Purpose
+
+Error handling ensures Harmony AI remains reliable and predictable under both expected and unexpected conditions.
+
+Errors should be handled gracefully whenever possible.
+
+---
+
+## 17.2 Philosophy
+
+Harmony AI follows:
+
+> Fail fast during development.
+
+> Fail gracefully in production.
+
+Errors should never be silently ignored.
+
+---
+
+## 17.3 Validation
+
+Validate inputs as early as possible.
+
+Examples:
+
+- File paths
+- Configuration values
+- User input
+- API responses
+
+---
+
+## 17.4 Exception Handling
+
+Catch exceptions only when they can be handled meaningfully.
+
+Avoid broad exception handling such as:
+
+```
+except Exception:
+```
+
+unless re-raising or logging appropriately.
+
+---
+
+## 17.5 Error Messages
+
+Error messages should:
+
+- Explain the problem.
+- Avoid technical jargon where possible.
+- Suggest corrective action when appropriate.
+
+---
+
+## 17.6 Recovery
+
+Whenever practical:
+
+- Continue processing.
+- Skip invalid records.
+- Preserve user data.
+- Record failures.
+
+---
+
+## 17.7 Exception Propagation
+
+Business layers should not depend on infrastructure-specific exceptions.
+
+Translate implementation exceptions into application-level exceptions.
+
+---
+
+## 17.8 Error Handling Checklist
+
+☐ Inputs validated
+
+☐ Exceptions logged
+
+☐ Recovery considered
+
+☐ Helpful messages
+
+☐ No silent failures
+
+---
+
+## 17.9 Chapter Summary
+
+Proper error handling improves stability, diagnostics, and user experience while reducing unexpected failures.
+
+---
+
+# Chapter 18 — Configuration Management
+
+## 18.1 Purpose
+
+Configuration controls application behavior without requiring source code modifications.
+
+Configuration should remain external to business logic.
+
+---
+
+## 18.2 Configuration Sources
+
+Configuration may originate from:
+
+- Configuration files
+- Environment variables
+- User settings
+- Database settings
+
+Hardcoded values should be avoided whenever practical.
+
+---
+
+## 18.3 Configuration Principles
+
+Configuration should be:
+
+- Documented
+- Validated
+- Version controlled where appropriate
+- Easy to understand
+
+---
+
+## 18.4 Default Values
+
+Every configurable option should define a sensible default whenever practical.
+
+---
+
+## 18.5 Validation
+
+Configuration should be validated during application startup.
+
+Invalid configuration should produce meaningful error messages.
+
+---
+
+## 18.6 Secrets
+
+Sensitive values should never be stored directly in source code.
+
+Examples:
+
+- Tokens
+- Passwords
+- API keys
+
+---
+
+## 18.7 Configuration Checklist
+
+☐ Defaults defined
+
+☐ Validation complete
+
+☐ Documentation updated
+
+☐ Secrets externalized
+
+☐ Startup verification implemented
+
+---
+
+## 18.8 Chapter Summary
+
+Configuration management improves flexibility while keeping business logic independent of deployment environments.
+
+---
+
+# Chapter 19 — Constants & Enumerations
+
+## 19.1 Purpose
+
+Constants and enumerations improve readability, consistency, and maintainability.
+
+Magic numbers and hardcoded strings should be avoided.
+
+---
+
+## 19.2 Constants
+
+Constants should:
+
+- Have descriptive names.
+- Be declared once.
+- Be reused throughout the project.
+
+Example:
+
+```
+DEFAULT_SCAN_BATCH_SIZE
+
+MAX_LIBRARY_DEPTH
+
+SUPPORTED_AUDIO_EXTENSIONS
+```
+
+---
+
+## 19.3 Enumerations
+
+Enumerations should represent finite sets of related values.
+
+Examples:
+
+```
+ScanStatus
+
+SyncState
+
+PlaybackMode
+
+RecommendationSource
+```
+
+---
+
+## 19.4 Organization
+
+Constants should be grouped by responsibility.
+
+Avoid large generic constants files.
+
+---
+
+## 19.5 Chapter Summary
+
+Constants and enumerations improve code clarity while reducing duplication and maintenance effort.
+
+---
+
+# Chapter 20 — Exception Design
+
+## 20.1 Purpose
+
+Custom exceptions communicate application-specific failures more clearly than generic exceptions.
+
+---
+
+## 20.2 Exception Hierarchy
+
+Exceptions should follow a logical hierarchy.
+
+Example:
+
+```
+HarmonyAIError
+
+    ConfigurationError
+
+    MetadataError
+
+    ScanError
+
+    DatabaseError
+
+    CloudSyncError
+```
+
+---
+
+## 20.3 Exception Naming
+
+Exception classes should end with:
+
+```
+Error
+```
+
+Examples:
+
+```
+LibraryScanError
+
+MetadataError
+
+PlaylistError
+```
+
+---
+
+## 20.4 Exception Messages
+
+Messages should describe:
+
+- What failed.
+- Why it failed.
+- Relevant context.
+
+---
+
+## 20.5 Reuse
+
+Prefer existing exception classes over creating unnecessary new types.
+
+---
+
+## 20.6 Exception Checklist
+
+☐ Correct exception type
+
+☐ Helpful message
+
+☐ Logged appropriately
+
+☐ Documented
+
+☐ Tested
+
+---
+
+## 20.7 Chapter Summary
+
+A consistent exception hierarchy improves diagnostics, maintainability, and communication between application layers.
+
+---
+
+# End of Part 4
+
+Next:
+
+# Part V — Quality Standards
+
+Chapters:
