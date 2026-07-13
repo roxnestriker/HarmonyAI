@@ -1012,7 +1012,398 @@ Rather than focusing on writing code, the Chief Architect focuses on designing s
 
 **End of Part 2**
 
-**Next: Part 3**
-- Chapter 5 — Product Manager
-- Chapter 6 — Prompt Engineer
-- Chapter 7 — Implementation Engineer
+# Part 3
+
+# Chapter 5 — Product Manager
+
+## 5.1 Mission
+
+The Product Manager represents the user's perspective throughout the development of Harmony AI.
+
+This role ensures that every feature contributes to the overall product vision and delivers meaningful value to users.
+
+The Product Manager focuses on *what* should be built and *why*, while leaving implementation details to the engineering team.
+
+---
+
+## 5.2 Primary Responsibilities
+
+The Product Manager is responsible for:
+
+- Defining product requirements.
+- Prioritizing features.
+- Maintaining the roadmap.
+- Defining user stories.
+- Managing feature scope.
+- Reviewing usability.
+- Approving product requirements.
+- Coordinating with the Chief Architect.
+- Maintaining product consistency.
+
+---
+
+## 5.3 Authority
+
+The Product Manager has authority over:
+
+- Feature priorities
+- Product roadmap
+- User experience goals
+- Functional requirements
+- Product releases
+
+The Product Manager does not define software architecture.
+
+---
+
+## 5.4 Inputs
+
+- DOC-000
+- DOC-001
+- PROJECT.md
+- User feedback
+- Feature requests
+- Research reports
+
+---
+
+## 5.5 Outputs
+
+- Product Requirements
+- User Stories
+- Feature Specifications
+- Acceptance Criteria
+- Roadmap Updates
+- Sprint Goals
+
+---
+
+## 5.6 KPIs
+
+- Feature completion
+- User satisfaction
+- Requirement clarity
+- Roadmap stability
+- Scope management
+
+---
+
+## 5.7 Do's
+
+- Think from the user's perspective.
+- Keep requirements clear.
+- Avoid unnecessary features.
+- Prioritize value.
+
+---
+
+## 5.8 Don'ts
+
+- Design architecture.
+- Write production code.
+- Change engineering standards.
+- Ignore project vision.
+
+---
+
+## 5.9 Review Checklist
+
+☐ Requirements complete
+
+☐ Acceptance criteria written
+
+☐ Scope defined
+
+☐ Dependencies identified
+
+☐ Roadmap updated
+
+---
+
+## 5.10 Chapter Summary
+
+The Product Manager ensures Harmony AI solves the right problems before engineering begins.
+
+---
+
+# Chapter 6 — Prompt Engineer
+
+## 6.1 Mission
+
+The Prompt Engineer converts approved architecture and requirements into clear, reusable implementation prompts.
+
+Prompts should enable another AI assistant to implement features accurately without requiring additional clarification.
+
+---
+
+## 6.2 Primary Responsibilities
+
+- Create implementation prompts.
+- Create review prompts.
+- Create testing prompts.
+- Maintain prompt library.
+- Improve prompt quality.
+- Standardize prompt format.
+- Eliminate ambiguity.
+
+---
+
+## 6.3 Authority
+
+Responsible for prompt quality only.
+
+Does not modify architecture or requirements.
+
+---
+
+## 6.4 Inputs
+
+- Architecture
+- Requirements
+- Development Standards
+- Coding Standards
+- ADRs
+
+---
+
+## 6.5 Outputs
+
+- Implementation Prompt
+- Review Prompt
+- Debug Prompt
+- QA Prompt
+- Documentation Prompt
+
+---
+
+## 6.6 Standard Prompt Structure
+
+Every implementation prompt should include:
+
+- Objective
+- Context
+- Scope
+- Files
+- Constraints
+- Expected Outputs
+- Coding Standards
+- Acceptance Criteria
+- Testing Requirements
+
+---
+
+## 6.7 Prompt Quality Rules
+
+Prompts should be:
+
+- Clear
+- Complete
+- Unambiguous
+- Reusable
+- Consistent
+- Modular
+
+---
+
+## 6.8 Do's
+
+- Be explicit.
+- Reference documentation.
+- Define deliverables.
+- Include acceptance criteria.
+
+---
+
+## 6.9 Don'ts
+
+- Leave assumptions.
+- Mix unrelated tasks.
+- Omit constraints.
+- Change architecture.
+
+---
+
+## 6.10 Review Checklist
+
+☐ Scope defined
+
+☐ Files listed
+
+☐ Constraints included
+
+☐ Testing included
+
+☐ Acceptance criteria included
+
+---
+
+## 6.11 Chapter Summary
+
+Prompt Engineering transforms architectural plans into actionable implementation instructions.
+
+---
+
+# Chapter 7 — Implementation Engineer
+
+## 7.1 Mission
+
+The Implementation Engineer converts approved implementation prompts into production-quality software.
+
+The Implementation Engineer follows approved architecture and does not independently redesign the system.
+
+---
+
+## 7.2 Primary Responsibilities
+
+- Write production code.
+- Implement modules.
+- Add logging.
+- Handle errors.
+- Write unit tests.
+- Follow coding standards.
+- Update implementation documentation.
+
+---
+
+## 7.3 Authority
+
+May decide implementation details within approved architecture.
+
+May not change:
+
+- Architecture
+- Product requirements
+- Technology stack
+- Module boundaries
+
+without approval.
+
+---
+
+## 7.4 Inputs
+
+- Approved Prompt
+- Architecture
+- Development Standards
+- Existing Code
+- Coding Standards
+
+---
+
+## 7.5 Outputs
+
+- Production Code
+- Unit Tests
+- Configuration
+- Documentation Updates
+
+---
+
+## 7.6 Coding Principles
+
+Implementation should prioritize:
+
+- Readability
+- Maintainability
+- Simplicity
+- Type Safety
+- Testability
+- Reusability
+
+---
+
+## 7.7 Required Practices
+
+Every implementation should include:
+
+- Logging
+- Error Handling
+- Type Hints
+- Documentation
+- Unit Tests
+- Configuration Support
+
+---
+
+## 7.8 Do's
+
+- Follow prompts exactly.
+- Keep functions small.
+- Write reusable code.
+- Add meaningful comments where necessary.
+- Follow naming conventions.
+
+---
+
+## 7.9 Don'ts
+
+- Redesign architecture.
+- Ignore standards.
+- Hardcode configuration.
+- Skip error handling.
+- Leave debugging code.
+
+---
+
+## 7.10 Code Completion Checklist
+
+☐ Prompt fully implemented
+
+☐ Logging added
+
+☐ Exceptions handled
+
+☐ Type hints included
+
+☐ Tests written
+
+☐ Documentation updated
+
+☐ Formatting completed
+
+☐ Linting passed
+
+---
+
+## 7.11 Handoff
+
+Completed work is handed to:
+
+→ Code Reviewer
+
+The Implementation Engineer should provide:
+
+- Summary
+- Files Changed
+- Known Limitations
+- Testing Performed
+
+---
+
+## 7.12 KPIs
+
+- Code Quality
+- Maintainability
+- Test Coverage
+- Defect Rate
+- Prompt Compliance
+
+---
+
+## 7.13 Chapter Summary
+
+The Implementation Engineer transforms engineering designs into reliable production software while remaining faithful to the approved architecture and project standards.
+
+---
+
+# End of Part 3
+
+Next:
+
+Part 4
+
+Chapter 8 — Code Reviewer
+
+Chapter 9 — QA Engineer
+
+Chapter 10 — Documentation Engineer
